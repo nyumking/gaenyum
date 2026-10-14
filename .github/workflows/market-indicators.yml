@@ -1,6 +1,9 @@
 name: Market Indicators
 on:
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/market-indicators.yml'
   schedule:
     - cron: '0 22 * * 2-6'
 permissions:
