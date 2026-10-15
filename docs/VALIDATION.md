@@ -39,3 +39,13 @@ GitHub 예약 실행은 기본 브랜치에 반영된 워크플로에만 적용�
 비밀키가 필요 없는 기본 수집기이며 실제 키나 연락처를 코드에 넣지 않았습니다. 선택 SEC 연락처는 Actions Secrets에서만 읽고 출력하지 않습니다. 공개 보고서에는 개인 데이터나 비밀키를 넣지 않습니다.
 
 기존 ChatGPT 예약 브리핑 두 개는 수정·삭제하지 않았고 GitHub 출력과 연결하지 않았습니다. 검증 완료 후 연동 여부를 결정합니다.
+
+## GitHub 실제 결과
+
+- [구현 PR #1](https://github.com/nyumking/gaenyum/pull/1): 병합 완료. 기본 브랜치 반영 커밋 `badbd56498af2bdc1e1be79b6666f572eff3262a`.
+- [PR CI](https://github.com/nyumking/gaenyum/actions/runs/38763560190): 성공. Python 3.11 테스트 통과.
+- [기본 브랜치 실제 수집](https://github.com/nyumking/gaenyum/actions/runs/38763700292): 테스트 성공, 실제 수집 및 보고서 업로드 완료. BLS HTTP 오류 때문에 `degraded` / 종료 코드 2를 기록하여 수집 작업은 최종 실패 상태로 표시됨.
+- [실행 보고서 artifact](https://github.com/nyumking/gaenyum/actions/runs/38763700292/artifacts/11986812729): Markdown/JSON 두 파일 업로드 확인. 다운로드한 JSON에서도 `core_price_volume_verified: true`, 7종목 모두 `crosscheck.status: verified`, BLS HTTP 오류를 확인함.
+- 기본 브랜치 워크플로의 21:00/07:00 KST cron 정의는 반영됨. 예약 시각 도달로 시작된 새 버전 실행은 아직 관측하지 않았음. 이번 push 실행은 미국 정규장 중이므로 최초 전망 ledger 저장 단계는 건너뜀. 이는 실제 예약 시각 실행 및 ledger 생성 성공을 의미하지 않음.
+
+따라서 **코드 구축·기본 브랜치 반영·테스트·실제 수집/보고서 업로드는 확인**, **완전 정상 운영·정각 전달·원본 ledger의 실전 첫 저장·실전 성과는 미검증**입니다.
