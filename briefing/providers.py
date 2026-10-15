@@ -94,34 +94,10 @@ def quote(symbol, now, mode):
             'premarket_volume': None, 'premarket_same_time_rvol': None,
             'missing': ['동일 시각 독립 시세 검증', '전체 프리마켓 거래량 및 전일 동일 시간대 비교']}
 
-def economic_calendar(now):
-    events, sources, errors = [], [], []
-    start, end = now-timedelta(hours=24), now+timedelta(days=30)
-    for name, url in CALENDARS.items():
-        try:
-            cal = Calendar.from_ical(fetch(url))
-            if not list(cal.walk('VEVENT')):
-                raise ValueError('no VEVENT records')
-            sources.append({'name': name, 'url': url, 'retrieved_at': now.isoformat()})
-            for item in cal.walk('VEVENT'):
-                date = item.decoded('dtstart')
-                if not isinstance(date, datetime) or date.tzinfo is None:
-                    continue
-                if start <= date <= end:
-                    events.append({'title': str(item.get('summary', '')), 'at_utc': date.astimezone(timezone.utc).isoformat(),
-                                   'at_kst': date.astimezone(__import__('zoneinfo').ZoneInfo('Asia/Seoul')).isoformat(),
-                                   'source': url, 'actual': None, 'consensus': None, 'previous': None})
-        except Exception as exc:
-            errors.append({'source': url, 'error': type(exc).__name__})
-    fed_url = 'https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm'
-    try:
-        events.extend(fomc_events(fetch(fed_url), now, fed_url))
-        sources.append({'name': 'Federal Reserve', 'url': fed_url, 'retrieved_at': now.isoformat()})
-    except Exception as exc:
-        errors.append({'source': fed_url, 'error': type(exc).__name__})
-    return {'events': sorted(events, key=lambda x: x.get('at_utc') or x['date_et']), 'sources': sources, 'errors': errors,
-            'missing': ['FOMC 정확한 발표 시각·소매판매·기업 실적 일정은 미수집', '발표 실제치·컨센서스·이전치 미수집'],
-            'coverage': 'BLS·BEA 발표 일정 및 공식 FOMC 회의 날짜; 전체 경제 일정 아님'}
+def economic_calendar(now, state='state'):
+    from .calendar_data import collect
+    return collect(now, fetch, fomc_events, state)
+
 
 def news(symbol, now):
     url = f'https://feeds.finance.yahoo.com/rss/2.0/headline?s={symbol}&region=US&lang=en-US'
@@ -136,35 +112,10 @@ def news(symbol, now):
     return {'source': url, 'retrieved_at': now.isoformat(), 'items': items[:8],
             'missing': ['원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음']}
 
-# CIKs identify issuers, not exchange listing. SPCX is intentionally not guessed.
-CIKS = {'HIMS': '0001773751', 'TSLA': '0001318605', 'NVDA': '0001045810',
-        'AMD': '0000002488', 'MU': '0000723125'}
-
 def official_filings(symbol, now):
-    import os
-    cik = CIKS.get(symbol)
-    if not cik:
-        return {'items': [], 'missing': ['공식 발행사 CIK 매핑 미확인; 다른 회사 공시로 대체하지 않음']}
-    agent = os.environ.get('SEC_USER_AGENT')
-    if not agent:
-        return {'items': [], 'missing': ['SEC_USER_AGENT 미설정: SEC 정책에 맞는 연락처 설정 후 공시 원문 연결 가능']}
-    url = f'https://data.sec.gov/submissions/CIK{cik}.json'
-    r = requests.get(url, timeout=(10, 25), headers={'User-Agent': agent})
-    r.raise_for_status()
-    data = r.json()
-    if symbol not in data.get('tickers', []):
-        raise ValueError('SEC issuer ticker mismatch')
-    recent = data['filings']['recent']
-    items = []
-    for i, day in enumerate(recent['filingDate']):
-        if (now.date()-timedelta(days=30)).isoformat() <= day <= now.date().isoformat():
-            accession = recent['accessionNumber'][i].replace('-', '')
-            document = recent['primaryDocument'][i]
-            items.append({'form': recent['form'][i], 'filed': day,
-                'url': f'https://www.sec.gov/Archives/edgar/data/{int(cik)}/{accession}/{document}',
-                'verification': 'official_filing_metadata', 'fundamental_impact': None})
-    return {'source': url, 'retrieved_at': now.isoformat(), 'issuer': data['name'], 'items': items[:10],
-            'missing': ['공시 존재만 검증; 원문 재무 영향은 미해석']}
+    from .sec import collect
+    return collect(symbol, now)
+
 
 def nasdaq_daily(symbol, cutoff):
     asset = 'etf' if symbol in ['SOXL', 'SPY', 'QQQ', 'SMH'] else 'stocks'

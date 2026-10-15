@@ -8,11 +8,13 @@ from . import providers as p
 from .core import SYMBOLS, BENCHMARKS, session_context, validate_bars, indicators, crosscheck, scenarios
 from .outcomes import save_snapshot, evaluate, summarize
 from .report import write_report
+from .audit import write_receipt
+from .news_verify import verify_feed
 
 
 def build(now, mode, state, scheduled=False):
     context = session_context(now, mode)
-    result = {'schema_version': '3.0', 'generated_at_utc': now.isoformat(),
+    result = {'schema_version': '3.1', 'generated_at_utc': now.isoformat(),
         'generated_at_kst': now.astimezone(ZoneInfo('Asia/Seoul')).isoformat(),
         'mode': mode, 'context': context, 'status': 'collecting', 'symbols': {}, 'market': {},
         'provenance': {'daily': 'Yahoo Finance via yfinance; raw OHLCV + adjusted close for outcomes',
@@ -50,6 +52,7 @@ def build(now, mode, state, scheduled=False):
         except Exception as exc:
             row['missing'].append(f'일봉 검증 실패: {type(exc).__name__}: {str(exc)[:120] if isinstance(exc, ValueError) else "provider unavailable"}')
     spy = histories.get('SPY')
+    news_cache = {}
     for symbol, row in rows.items():
         if symbol in histories and spy is not None:
             row['indicators'] = indicators(histories[symbol], spy)
@@ -69,7 +72,11 @@ def build(now, mode, state, scheduled=False):
             row['official_filings'] = p.official_filings(symbol, now)
             row['missing'] += row['official_filings']['missing']
         except Exception as exc:
+            row['official_filings'] = {'status': 'unavailable', 'items': [], 'error': type(exc).__name__,
+                'http_status': getattr(getattr(exc, 'response', None), 'status_code', None)}
             row['missing'].append(f'공식 공시 수집 실패: {type(exc).__name__}')
+        if row.get('news'):
+            row['news'] = verify_feed(row['news'], symbol, row.get('official_filings', {}), now, news_cache)
         if symbol in histories:
             try:
                 row['quote'] = p.quote(symbol, now, mode)
@@ -86,9 +93,10 @@ def build(now, mode, state, scheduled=False):
         row['scenario'] = scenarios(v, eligible, symbol)
         row['scenario']['basis'] = '완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님'
         result['symbols'][symbol] = row
-    result['calendar'] = p.economic_calendar(now)
+    result['calendar'] = p.economic_calendar(now, state)
     degraded = (any(r['scenario']['stance'] == '판단 보류' for r in result['symbols'].values())
                 or bool(result['calendar']['errors'])
+                or any(r.get('official_filings', {}).get('status') in ['configuration_required', 'issuer_unresolved', 'unavailable', 'metadata_only', 'fund_series_unconfirmed'] for r in result['symbols'].values())
                 or any(any('수집 실패' in m or '시세 실패' in m for m in r['missing']) for r in result['symbols'].values()))
     result['status'] = 'degraded' if degraded else 'partial'
     result['core_price_volume_verified'] = all(r['crosscheck']['status'] == 'verified' for r in rows.values())
@@ -116,6 +124,7 @@ def main():
     args = parser.parse_args()
     result = build(datetime.now(timezone.utc), args.mode, args.state, args.scheduled)
     write_report(result, args.output)
+    write_receipt(result, args.output)
     print(f"Briefing status: {result['status']}; output: {args.output}")
     # Data degradation is a visible job failure while artifacts are still uploaded.
     return 2 if result['status'] == 'degraded' else 0

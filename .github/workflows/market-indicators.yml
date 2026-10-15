@@ -1,4 +1,4 @@
-name: US Market Briefing 3.0
+name: US Market Briefing 3.1
 on:
   workflow_dispatch:
     inputs:
@@ -51,7 +51,7 @@ jobs:
         run: |
           set -euo pipefail
           if git ls-remote --exit-code --heads origin briefing-history > /dev/null; then
-            git fetch origin briefing-history
+            git fetch origin refs/heads/briefing-history:refs/remotes/origin/briefing-history
             mkdir -p state
             git archive FETCH_HEAD state | tar -x
           else
@@ -67,6 +67,7 @@ jobs:
           SCHEDULE: ${{ github.event.schedule }}
           INPUT_MODE: ${{ inputs.mode }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          BRIEFING_SCHEDULE: ${{ github.event.schedule }}
         shell: bash
         run: |
           set -euo pipefail
@@ -87,8 +88,8 @@ jobs:
             state/
           if-no-files-found: error
           retention-days: 90
-      - name: Persist first forecasts without rewriting history
-        if: always() && github.ref == 'refs/heads/main' && hashFiles('state/forecasts/*.json') != ''
+      - name: Persist immutable reports and forecast ledger
+        if: always() && github.ref == 'refs/heads/main' && hashFiles('output/receipt.json') != ''
         shell: bash
         run: |
           set -euo pipefail
@@ -100,13 +101,11 @@ jobs:
             git worktree add --detach /tmp/briefing-ledger HEAD
             (cd /tmp/briefing-ledger && git checkout --orphan briefing-history && git rm -rf .)
           fi
-          mkdir -p /tmp/briefing-ledger/state/forecasts
-          cp -n state/forecasts/*.json /tmp/briefing-ledger/state/forecasts/
-          cd /tmp/briefing-ledger
-          git add state/forecasts
-          if ! git diff --cached --quiet; then
-            git commit -m 'Record immutable briefing forecasts'
-            git push origin HEAD:refs/heads/briefing-history
+          python -m briefing.archive --destination /tmp/briefing-ledger
+          git -C /tmp/briefing-ledger add reports state
+          if ! git -C /tmp/briefing-ledger diff --cached --quiet; then
+            git -C /tmp/briefing-ledger commit -m 'Archive reports, receipt and forecast ledger'
+            git -C /tmp/briefing-ledger push origin HEAD:refs/heads/briefing-history
           fi
       - name: Expose degraded collection as job failure
         if: always() && steps.report.outcome != 'success'
