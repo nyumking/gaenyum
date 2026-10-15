@@ -62,3 +62,15 @@ GitHub 예약 실행은 기본 브랜치에 반영된 워크플로에만 적용�
 - Markdown/JSON 파일 해시·GitHub 실행 ID·event·cron·실행 시각이 담긴 receipt와 보고서 불변 보관 경로를 추가함. 예약 성공 판단은 `event=schedule`, 올바른 모드·세션·3시간 이내 지연, 실제 artifact/보관 파일의 일치 여부로 확인해야 함.
 
 - 추가: FRED 공식 발표 달력의 CPI(rid=10), PPI(46), 고용보고서(50)를 현재·다음 달 조회하는 경로를 구현. 미국 중부시간·월·발표명·페이지 누락 검증 포함. BLS 전체 일정과 구분하며 나머지 발표는 미수집으로 표시. 전체 로컬 테스트 39개 통과.
+
+## 3.1 배포 후 GitHub 실제 검증 (2026-10-16 KST)
+
+- PR #2 병합: `68dba9506d94835074a90575057da31020006e65`. PR 및 기본 브랜치 테스트 39개 통과.
+- 실제 수집 [실행 38771858396](https://github.com/nyumking/gaenyum/actions/runs/38771858396), `event=push`, 보고서 생성 시각 01:47:44 KST. 예약 실행으로 인정하지 않음 (`scheduled_slot_valid=false`).
+- [artifact 11990789969](https://github.com/nyumking/gaenyum/actions/runs/38771858396/artifacts/11990789969)에 Markdown/JSON/receipt 업로드 성공. 다운로드 후 receipt의 두 파일 SHA256 검증 성공.
+- `briefing-history/reports/38771858396-1/` 세 파일과 다운로드 파일의 바이트 일치 확인. 보관 단계 성공. 이 시점은 장중이므로 새 장마감 전망을 발행하지 않음.
+- 핵심 7종목 가격·거래량 교차검증 통과. 뉴스 원문 종목별 확인 합계 10건 / 중복 제거 원문 URL 7개. SEC에 의한 수치 대조 성공은 0건.
+- SEC는 설정 오류가 아닌 HTTP 403으로 7종목 모두 수집 실패. GitHub에서도 접근 복구 미완료.
+- BLS 직접 403, FRED 대체 조회 ReadTimeout. 유효한 공식 BLS 사본 사용, BEA/Fed 실시간 성공. 사본 만료는 2026-10-18 01:33:05 KST이며 만료 후 실패를 숨기지 않음.
+- 전체 보고서 `degraded`; 마지막 상태 노출 단계가 의도대로 실패하여 GitHub 실행은 failure. 생성·업로드·영구 저장은 성공한 것과 구분.
+- 2026-10-16 07:00·21:00 KST 실제 예약은 아직 미래. 07:30·21:30에 이 대화의 후속 점검을 등록했으며 두 슬롯의 schedule 이벤트·receipt·artifact·보관 파일을 확인할 예정. 기존 개장 전/장마감 브리핑 예약은 유지하고 연동 보류.
