@@ -1,15 +1,28 @@
-name: Market Indicators
+name: US Market Briefing 3.0
 on:
   workflow_dispatch:
+    inputs:
+      mode:
+        description: Report session
+        type: choice
+        options: [premarket, close]
+        default: close
   push:
-    paths:
-      - '.github/workflows/market-indicators.yml'
+    branches: [main]
+    paths: ['briefing/**', 'tests/**', 'requirements*.txt', '.github/workflows/**', 'market_analysis.py']
+  pull_request:
   schedule:
-    - cron: '0 22 * * 2-6'
+    # 21:00 KST Mon–Fri (07:00/08:00 ET, depending on DST)
+    - cron: '0 12 * * 1-5'
+    # 07:00 KST Tue–Sat = 22:00 UTC Mon–Fri (17:00/18:00 ET)
+    - cron: '0 22 * * 1-5'
 permissions:
   contents: read
+concurrency:
+  group: briefing-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
 jobs:
-  analyze:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -17,12 +30,84 @@ jobs:
         with:
           python-version: '3.11'
           cache: pip
-      - run: pip install -r requirements.txt
-      - run: python market_analysis.py
-      - uses: actions/upload-artifact@v4
-        if: always()
+      - run: pip install -r requirements-dev.txt
+      - run: python -m pytest -q
+  collect:
+    if: github.event_name != 'pull_request'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
-          name: market-indicators
-          path: output/
-          if-no-files-found: warn
-          retention-days: 30
+          python-version: '3.11'
+          cache: pip
+      - run: pip install -r requirements.txt
+      - name: Restore durable forecast ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git ls-remote --exit-code --heads origin briefing-history > /dev/null; then
+            git fetch origin briefing-history
+            mkdir -p state
+            git archive FETCH_HEAD state | tar -x
+          else
+            code=$?
+            if [ "$code" != 2 ]; then exit "$code"; fi
+            mkdir -p state/forecasts
+          fi
+      - name: Collect timestamped report
+        id: report
+        continue-on-error: true
+        env:
+          EVENT: ${{ github.event_name }}
+          SCHEDULE: ${{ github.event.schedule }}
+          INPUT_MODE: ${{ inputs.mode }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          mode="${INPUT_MODE:-close}"
+          args=()
+          if [ "$EVENT" = schedule ]; then
+            args+=(--scheduled)
+            if [ "$SCHEDULE" = '0 12 * * 1-5' ]; then mode=premarket; fi
+          fi
+          python -m briefing.cli --mode "$mode" "${args[@]}"
+      - name: Upload report and audit ledger, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: briefing-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            output/
+            state/
+          if-no-files-found: error
+          retention-days: 90
+      - name: Persist first forecasts without rewriting history
+        if: always() && github.ref == 'refs/heads/main' && hashFiles('state/forecasts/*.json') != ''
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          if git show-ref --verify --quiet refs/remotes/origin/briefing-history; then
+            git worktree add /tmp/briefing-ledger origin/briefing-history
+          else
+            git worktree add --detach /tmp/briefing-ledger HEAD
+            (cd /tmp/briefing-ledger && git checkout --orphan briefing-history && git rm -rf .)
+          fi
+          mkdir -p /tmp/briefing-ledger/state/forecasts
+          cp -n state/forecasts/*.json /tmp/briefing-ledger/state/forecasts/
+          cd /tmp/briefing-ledger
+          git add state/forecasts
+          if ! git diff --cached --quiet; then
+            git commit -m 'Record immutable briefing forecasts'
+            git push origin HEAD:refs/heads/briefing-history
+          fi
+      - name: Expose degraded collection as job failure
+        if: always() && steps.report.outcome != 'success'
+        run: exit 1

@@ -1,18 +1,59 @@
-# US Market Briefing Data Engine
+# 미국 증시 브리핑 3.0
 
-Automated OHLCV and technical indicator collection for HIMS, TSLA, SPCX (SpaceX), and SOXL.
+HIMS · TSLA · SPCX · SOXL · NVDA · AMD · MU를 대상으로 완료된 정규장 데이터와 출처를 기록하는 Python 엔진입니다. SPCX가 SpaceX라고 가정하지 않습니다. 공식 디렉터리에서 종목명·거래소·테스트 종목 여부를 확인하고 기대한 발행사와 다르면 판단을 보류합니다.
 
-## Setup
+## 실행
 
-```bash
-pip install -r requirements.txt
-python market_analysis.py
+Python **3.11+**:
+
+```sh
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements-dev.txt
+python -m pytest -q
+python -m briefing.cli --mode premarket
+python -m briefing.cli --mode close
 ```
 
-The script writes `output/indicators.json` and `output/indicators.md`, including data source, latest candle timestamp, and daily/4h RSI, MACD, SMA, volume and support/resistance. It fails visibly when market data is unavailable or stale rather than inventing values.
+기존 `python market_analysis.py`도 close 모드로 실행됩니다. 보고서는 `output/briefing.md`, `output/briefing.json`에 저장합니다. `--output`, `--state`로 경로를 바꿀 수 있습니다. `--scheduled`는 미국 휴장일과 세션 불일치 때 수집을 건너뜁니다. 핵심 데이터가 누락되어도 보고서는 생성하고, 상태 `degraded`와 종료 코드 **2**로 운영 실패를 드러냅니다. 휴장일 스킵은 종료 코드 0입니다. 핵심 수집을 통과해도 원문 뉴스·매크로 등 기능 한계가 있어 상태는 partial이며 종료 코드 0입니다. complete라고 표시하지 않습니다. 수동 실행은 휴장일에도 마지막 완료 일봉을 조회하지만 유효 세션이 아니면 신규 전망을 저장하지 않습니다.
 
-## Automation
+## 검증과 분석
 
-The GitHub Actions workflow runs 22:00 UTC Tuesday–Saturday (07:00 Asia/Seoul), after the regular US trading session, with a US market-calendar check to skip non-trading days. Trigger it manually via Actions → Market Indicators → Run workflow.
+- Nasdaq Trader 공식 Nasdaq/다른 거래소 디렉터리, 파일 생성 시각 96시간 이내, 기대 발행사명 대조. 미등재와 조회 실패를 구분합니다. 등재 확인은 실시간 거래정지 해제 보장이 아닙니다.
+- Yahoo Finance 일봉 OHLCV와 Nasdaq 공식 과거 시세(실패 시 Stooq) 동일 일자 종가·거래량 대조. 종가 상대오차 1%, 거래량 10% 이내여야 통과합니다. 공급자들의 원천이 완전히 독립적이라고 보장하지 않으며 분할·집계 차이는 보류 처리합니다.
+- 거래소 달력으로 최신 완료 일자를 고정하고 미완료 일봉, 누락 세션, 중복, NaN, 음수, 잘못된 OHLC를 거부합니다. 최소 60거래일, 약 550일 조회 구간. SMA200처럼 부족한 지표는 null입니다.
+- Wilder RSI14/ATR14(SMA seed), EMA MACD12/26/9, SMA5/10/20/50/200, SPY 대비 RS20, OBV/5일 변화, 직전 20일 평균 대비 RVOL, 5일/직전5일 거래량 변화, 거래대금 근사치.
+- SPY·QQQ·SMH 시장/반도체 환경 표. 장전/시간외 1분 관측가는 시각·세션·지연 여부를 별도로 기록하며 일봉과 섞지 않습니다. 실시간 독립 검증 및 동일 시각 거래량 비교는 미지원으로 명시합니다.
+- 상장 식별·데이터·주가/거래량·SPY 검증이 통과한 종목만 5–20거래일 기술적 긍정/중립/부정과 상승/기본/하락 조건, ATR 참고 구간을 생성합니다. 뉴스·거시까지 검증된 종합 판단이 아닙니다. 최근 220거래일 주식분할이 있으면 방향을 보류합니다.
+- BLS·BEA 공식 ICS 경제 일정과 Fed 공식 FOMC 회의 날짜, Yahoo RSS 기사와 발행시각. 기사 제목은 원문 미검증으로 표시하며 주가 원인·재무 효과를 추정하지 않습니다. 선택적으로 SEC 공식 제출 공시 메타데이터를 확인합니다.
 
-Yahoo Finance (via yfinance) is a convenience data source, not a guaranteed exchange-grade feed. Always cross-check material prices before trading. The 4h timeframe uses regular-session 1h bars grouped into 4-hour chunks anchored at 09:30 ET; since the US regular session is 6.5 hours, its final 4h candle is shorter. All calculations use available completed candles and are marked with timestamps.
+## 사후 5/10/20 거래일 검증
+
+보고서 생성 후 **첫 정규장 시가** 진입을 가정하고 5/10/20번째 거래일 종가를 평가합니다. 배당·분할을 반영한 현재 Adj Close/Open 조정비 기준 근사 수익률, SPY 초과수익과 방향 적중을 기록합니다. 미래 결과는 pending, 누락은 missing_data입니다. 중립은 적중률에서 제외합니다. 거래 비용과 슬리피지는 포함하지 않습니다.
+
+`state/forecasts/미국날짜-모드.json`은 해당 슬롯의 최초 검증된 전망만 저장하며 재실행으로 덮어쓰지 않습니다. 전체 판단이 보류된 경우 빈 전망을 저장하지 않습니다. GitHub Actions는 별도 **briefing-history** 브랜치에 원본 전망을 보관합니다. 수익률은 공급자 수정값에 따라 재계산되며 당시 계산 결과는 각 실행 artifact에 남습니다. 550일보다 오래된 원본 진입일은 missing_data가 될 수 있습니다. 성과를 소급해 만들어 넣지 않습니다.
+
+## GitHub Actions
+
+`.github/workflows/market-indicators.yml`:
+
+| 종류 | 한국 시각 | UTC cron |
+|---|---|---|
+| 개장 전 | 월–금 21:00 | `0 12 * * 1-5` |
+| 장 마감 | 화–토 07:00 | `0 22 * * 1-5` |
+
+KST는 고정이고 미국 DST는 거래소 달력에서 처리합니다. 기존 워크플로의 `22 UTC 화–토`는 KST 수–일이므로 월–금 UTC로 바로잡았습니다. 휴일/조기 폐장도 달력에 따릅니다. cron은 기본 브랜치에 반영된 뒤 실행되며 GitHub에서 지연·누락될 수 있어 정각 전달을 보장하지 않습니다. 수동 실행: Actions → US Market Briefing 3.0 → Run workflow → mode 선택.
+
+PR에서는 네트워크 없는 테스트만 실행합니다. main push/수동/예약 실행은 테스트 후 실제 수집, 결과 artifact(90일) 업로드, 원본 전망 저장을 수행합니다. degraded는 artifact 업로드 후 빨간 실패 상태로 표시됩니다. 저장 실패도 실패로 드러냅니다. 공용 피드 차단은 정상 데이터로 가장하지 않습니다.
+
+기본 읽기 권한, 수집 작업만 ledger 저장을 위해 contents:write. 공개 저장소이므로 보고서·전망·artifact를 비공개 데이터 저장소로 사용하면 안 됩니다.
+
+## 비밀정보
+
+기본 공급자는 API 키 없이 동작합니다. `.env`, 키 파일은 제외합니다. SEC 연결을 쓰려면 저장소 Settings → Secrets and variables → Actions에서 **SEC_USER_AGENT**를 조직명과 실제 연락처로 설정하세요. 미설정 시 해당 공시 수집은 명시적으로 생략됩니다. 연락처나 키를 코드·보고서·로그에 출력하지 않습니다. `.env.example`은 예시뿐이고 자동 로딩하지 않습니다. 선택 공급자를 추가한다면 키는 반드시 Secrets/환경변수에 둡니다.
+
+## 현재 한계와 예약 브리핑
+
+FOMC 정확한 발표 시각, 소매판매, 기업 실적 일정, 실제치/컨센서스, 선물·금리·VIX·전체 업종 breadth는 미수집입니다. BLS·BEA·FOMC 일정만으로 모든 발표를 다뤘다고 표현하지 않습니다. 뉴스의 원문 재무 영향 분석은 자동화하지 않았습니다. 현재 지표만으로 수익률 예측이 검증되었다고 주장하지 않습니다.
+
+기존 ChatGPT 예약 브리핑 두 개는 변경하거나 삭제하지 않습니다. 이 워크플로는 GitHub 보고서 생성이며 ChatGPT 전달 연결은 포함하지 않습니다. 실제 피드 가용성, 종목 식별, 시간대와 누적 성과를 검증한 뒤 별도 연동 여부를 판단합니다. 구축·실행 검증 내역은 [운영 검증 기록](docs/VALIDATION.md)을 보세요.
