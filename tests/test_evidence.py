@@ -132,3 +132,13 @@ def test_fund_series_cannot_match_ticker_in_another_series():
     html = '<p>Series S000027920 Semiconductor fund</p><p>Series S000027921 Another fund SOXL</p>'
     assert not fund_index_matches(html, 'S000027920', 'SOXL')
     assert fund_index_matches('<p>Series S000027920 Semiconductor SOXL</p>', 'S000027920', 'SOXL')
+
+
+def test_fred_central_time_and_incomplete_page_rejected():
+    html = """All times are US Central Time. Releases 1-1 of 1
+    <table class="table-standard-theme"><tr><td colspan="2">Tuesday November 10, 2026 Updated</td></tr>
+    <tr><td>7:30 am</td><td><a href="/release?rid=10">Consumer Price Index</a></td></tr></table>"""
+    data = c.parse_fred(html, 'https://fred.stlouisfed.org/releases/calendar', 10, 2026, 11)
+    assert data[0]['at_kst'] == '2026-11-10T22:30:00+09:00'
+    with pytest.raises(ValueError): c.parse_fred(html.replace('1-1 of 1', '1-1 of 2'), '', 10, 2026, 11)
+    with pytest.raises(ValueError): c.parse_fred(html, '', 10, 2026, 10)

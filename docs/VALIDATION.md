@@ -60,3 +60,5 @@ GitHub 예약 실행은 기본 브랜치에 반영된 워크플로에만 적용�
 - 로컬 SEC 요청은 실제 연락처를 사용해도 HTTP 403. Secret 저장 성공과 SEC 수집 성공을 구분함. GitHub 실행 환경에서 별도 확인 필요.
 - SPCX CIK 1181412는 SEC 공식 8-K 색인 https://www.sec.gov/Archives/edgar/data/1181412/000162828026056945/0001628280-26-056945-index.html 에서 확인함. SOXL은 CIK 1424958 / Series S000027920 / Class C000084845를 SEC https://www.sec.gov/Archives/edgar/data/1424958/000119312526287433/0001193125-26-287433-index-headers.html 에서 확인하고, 현재 개별 공시 색인의 동일 series 블록과 ticker를 재대조하도록 구현함.
 - Markdown/JSON 파일 해시·GitHub 실행 ID·event·cron·실행 시각이 담긴 receipt와 보고서 불변 보관 경로를 추가함. 예약 성공 판단은 `event=schedule`, 올바른 모드·세션·3시간 이내 지연, 실제 artifact/보관 파일의 일치 여부로 확인해야 함.
+
+- 추가: FRED 공식 발표 달력의 CPI(rid=10), PPI(46), 고용보고서(50)를 현재·다음 달 조회하는 경로를 구현. 미국 중부시간·월·발표명·페이지 누락 검증 포함. BLS 전체 일정과 구분하며 나머지 발표는 미수집으로 표시. 전체 로컬 테스트 39개 통과.
