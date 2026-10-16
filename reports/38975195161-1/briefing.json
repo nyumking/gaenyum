@@ -1,0 +1,1561 @@
+{
+  "schema_version": "3.1",
+  "generated_at_utc": "2026-10-16T22:21:48.298440+00:00",
+  "generated_at_kst": "2026-10-17T07:21:48.298440+09:00",
+  "mode": "close",
+  "context": {
+    "last_completed_session": "2026-10-16",
+    "market_date": "2026-10-16",
+    "scheduled_session_valid": true
+  },
+  "status": "degraded",
+  "symbols": {
+    "HIMS": {
+      "listing": {
+        "name": "Hims & Hers Health, Inc. Class A Common Stock",
+        "exchange": "N",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": null,
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Hims",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과",
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": null,
+      "quote": {
+        "price": 28.05,
+        "observed_at": "2026-10-16T18:19:32-04:00",
+        "age_minutes": 2.27,
+        "session": "afterhours",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/HIMS/historical?assetclass=stocks&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=HIMS&region=US&lang=en-US",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "items": [
+          {
+            "title": "What Does Hims & Hers Health (HIMS) Expansion Into The UK And Australia Mean?",
+            "url": "https://finance.yahoo.com/healthcare/articles/does-hims-hers-health-hims-191041633.html?.tsrc=rss",
+            "published_at": "2026-10-16T19:10:41+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/healthcare/articles/does-hims-hers-health-hims-191041633.html?.tsrc=rss",
+              "retrieved_at": "2026-10-16T22:21:56.041605+00:00",
+              "sha256": "994ab677e5cdf4d114597bfb27646dd614aeef743f4249026fc4686acec4168c",
+              "bytes": 1051296,
+              "title": "What Does Hims & Hers Health (HIMS) Expansion Into The UK And Australia Mean?",
+              "published_at": "2026-10-16T19:10:41+00:00",
+              "word_count": 500
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Hims & Hers Health, Inc. (HIMS) is Attracting Investor Attention: Here is What You Should Know",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/hims-hers-health-inc-hims-120005382.html?.tsrc=rss",
+            "published_at": "2026-10-16T12:00:05+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/markets/stocks/articles/hims-hers-health-inc-hims-120005382.html?.tsrc=rss",
+              "retrieved_at": "2026-10-16T22:21:56.516493+00:00",
+              "sha256": "29edd3f4c398188f49fbb0f3728382e361e427d53d44b4a2acad0b133b040a73",
+              "bytes": 1071910,
+              "title": "Hims & Hers Health, Inc. (HIMS) is Attracting Investor Attention: Here is What You Should Know",
+              "published_at": "2026-10-16T12:00:05+00:00",
+              "word_count": 907
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "HIMS Stock Snaps 3-Day Slump On Peptide Hopes: Trump Administration Reviews Plan That Could Unlock $2.2B Market",
+            "url": "https://stocktwits.com/news-articles/markets/equity/hims-stock-peptide-hopes-trump-administration-reviews-plan-unlock-market/cZx0VkeRBr8?.tsrc=rss",
+            "published_at": "2026-10-16T02:04:19+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Hims & Hers Health, Inc. (HIMS) Suffers a Larger Drop Than the General Market: Key Insights",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/hims-hers-health-inc-hims-204502381.html?.tsrc=rss",
+            "published_at": "2026-10-14T20:45:02+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Should You Trim Or Add To Your Hims & Hers Position Now?",
+            "url": "https://www.trefis.com/articles/618317/should-you-trim-or-add-to-your-hims-hers-position-now/2026-10-12?.tsrc=rss",
+            "published_at": "2026-10-12T22:53:46+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Hims & Hers to Announce Third Quarter 2026 Financial Results on November 9, 2026",
+            "url": "https://finance.yahoo.com/healthcare/articles/hims-hers-announce-third-quarter-200500031.html?.tsrc=rss",
+            "published_at": "2026-10-12T20:05:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Hers Launches in Australia, Built to Care for the Whole Woman",
+            "url": "https://finance.yahoo.com/healthcare/articles/hers-launches-australia-built-care-190000395.html?.tsrc=rss",
+            "published_at": "2026-10-12T19:00:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Hims & Hers Stock Jumped 10% in a Day as Volume Hit 15.9 Million Shares. Here’s Where the Stock Could Go by 2030",
+            "url": "https://www.tikr.com/blog/hims-hers-stock-jumped-10-in-a-day-as-volume-hit-15-9-million-shares-heres-where-the-stock-could-go-by-2030?ref=yahoofinance&.tsrc=rss",
+            "published_at": "2026-10-11T15:04:22+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_retrieved_unsubstantiated": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      "scenario": {
+        "stance": "판단 보류",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "reason": "상장 식별·데이터·교차검증 중 미충족 항목 존재",
+        "cases": [],
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "TSLA": {
+      "listing": {
+        "name": "Tesla, Inc.  - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Tesla",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과",
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교",
+        "장전/시간외 관측 시세 지연 또는 세션 불일치"
+      ],
+      "indicators": null,
+      "quote": {
+        "price": 352.1678,
+        "observed_at": "2026-10-16T18:21:53-04:00",
+        "age_minutes": -0.08,
+        "session": "afterhours",
+        "status": "stale_or_wrong_session",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=TSLA&region=US&lang=en-US",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "items": [
+          {
+            "title": "Stock Market Today, Oct. 16: Tesla Slips 2% as Roadster Reveal Fades Before Earnings",
+            "url": "https://www.fool.com/coverage/stock-market-today/2026/10/16/stock-market-today-oct-16-tesla-falls-as-roadster-reveal-fades-before-earnings/?.tsrc=rss",
+            "published_at": "2026-10-16T21:43:03+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Tesla investors hardly impressed with Elon Musk's 'flying car'",
+            "url": "https://www.thestreet.com/crypto/markets/tesla-investors-hardly-impressed-with-elon-musks-flying-car?.tsrc=rss",
+            "published_at": "2026-10-16T21:25:00+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "HTTPError",
+              "http_status": 403
+            }
+          },
+          {
+            "title": "Dow Jones Futures: S&P 500, Nasdaq Break Key Levels As CoreWeave, Dell Dive; Tesla, SpaceX, Meta Loom",
+            "url": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-s%26p-500%2C.html?.tsrc=rss",
+            "published_at": "2026-10-16T21:08:07+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla Retreats After Flying Roadster Demo; Musk Cites SpaceX Collaboration",
+            "url": "https://finance.yahoo.com/m/742f39e4-fd25-3539-8b7a-19a6f7c16be8/tesla-retreats-after-flying.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:31:25+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla Has Built a Flying Car. It Will Blow Your Mind.",
+            "url": "https://finance.yahoo.com/m/33917906-5253-3056-8faf-6a7077a9d6dc/tesla-has-built-a-flying-car..html?.tsrc=rss",
+            "published_at": "2026-10-16T20:22:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla staffs up Nevada Semi plant as fleet orders stack up",
+            "url": "https://finance.yahoo.com/technology/articles/tesla-staffs-nevada-semi-plant-195219189.html?.tsrc=rss",
+            "published_at": "2026-10-16T19:52:19+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Apple is Now the Top-Performing Magnificent 7 Stock in 2026. Here’s why it’s Beating NVIDIA, Tesla, and Amazon",
+            "url": "https://247wallst.com/videos/apple-is-now-the-top-performing-magnificent-7-stock-in-2026-heres-why-its-beating-nvidia-tesla-and-amazon/?.tsrc=rss",
+            "published_at": "2026-10-16T19:34:26+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Netflix, Tesla Headline Busy Earnings Calendar; Spending Plans Key To Meta's Report",
+            "url": "https://finance.yahoo.com/m/34a9e47f-c222-32f5-8dae-85ae50f8e1d1/netflix%2C-tesla-headline-busy.html?.tsrc=rss",
+            "published_at": "2026-10-16T18:23:46+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_unavailable": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      "scenario": {
+        "stance": "판단 보류",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "reason": "상장 식별·데이터·교차검증 중 미충족 항목 존재",
+        "cases": [],
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "SPCX": {
+      "listing": {
+        "name": "Space Exploration Technologies Corp. - Class A Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Space",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과",
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교",
+        "장전/시간외 관측 시세 지연 또는 세션 불일치"
+      ],
+      "indicators": null,
+      "quote": {
+        "price": 145.8,
+        "observed_at": "2026-10-16T18:21:56-04:00",
+        "age_minutes": -0.13,
+        "session": "afterhours",
+        "status": "stale_or_wrong_session",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/SPCX/historical?assetclass=stocks&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 88,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=SPCX&region=US&lang=en-US",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "items": [
+          {
+            "title": "Dow Jones Futures: S&P 500, Nasdaq Break Key Levels As CoreWeave, Dell Dive; Tesla, SpaceX, Meta Loom",
+            "url": "https://finance.yahoo.com/m/4342d021-69d3-3aa1-9753-76f72c9ba95d/dow-jones-futures%3A-s%26p-500%2C.html?.tsrc=rss",
+            "published_at": "2026-10-16T21:08:07+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Tesla, SpaceX, CoreWeave, Lam Research, Netflix, Strategy, and More Stocks That Explain Today’s Market",
+            "url": "https://finance.yahoo.com/m/c6ccb9fa-69f9-3a76-9ab4-a63df71bca8a/tesla%2C-spacex%2C-coreweave%2C-lam.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:32:00+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Blue Origin’s Latest Move Shows How It’s Quietly Taking On SpaceX",
+            "url": "https://finance.yahoo.com/m/8a824e15-462c-38cb-8fe5-70b39546aa8e/blue-origin%E2%80%99s-latest-move.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:23:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla investors hardly impressed with Elon Musk's 'flying car'",
+            "url": "https://www.thestreet.com/crypto/markets/tesla-investors-hardly-impressed-with-elon-musks-flying-car?.tsrc=rss",
+            "published_at": "2026-10-16T21:25:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla Retreats After Flying Roadster Demo; Musk Cites SpaceX Collaboration",
+            "url": "https://finance.yahoo.com/m/742f39e4-fd25-3539-8b7a-19a6f7c16be8/tesla-retreats-after-flying.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:31:25+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "AT&T Stock Was Downgraded Over SpaceX Days Before Q3 Earnings. Here’s What to Watch on October 21",
+            "url": "https://www.tikr.com/blog/att-stock-was-downgraded-over-spacex-days-before-q3-earnings-heres-what-to-watch-on-october-21?ref=yahoofinance&.tsrc=rss",
+            "published_at": "2026-10-16T20:07:07+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Netflix, Tesla Headline Busy Earnings Calendar; Spending Plans Key To Meta's Report",
+            "url": "https://finance.yahoo.com/m/34a9e47f-c222-32f5-8dae-85ae50f8e1d1/netflix%2C-tesla-headline-busy.html?.tsrc=rss",
+            "published_at": "2026-10-16T18:23:46+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla's Flying Roadster Sends Delivery Odds Tumbling Despite Spectacular Demo",
+            "url": "https://www.benzinga.com/markets/prediction-markets/26/10/62421188/tesla-roadster-delivery-odds-flying-demo?utm_source=yahooFinance&utm_campaign=partner_feed&utm_medium=referral&.tsrc=rss",
+            "published_at": "2026-10-16T18:19:42+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_unavailable": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      "scenario": {
+        "stance": "판단 보류",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "reason": "상장 식별·데이터·교차검증 중 미충족 항목 존재",
+        "cases": [],
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "SOXL": {
+      "listing": {
+        "name": "Direxion Daily Semiconductor Bull 3X ETF",
+        "exchange": "P",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": null,
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Daily Semiconductor Bull",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과",
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교",
+        "장전/시간외 관측 시세 지연 또는 세션 불일치"
+      ],
+      "indicators": null,
+      "quote": {
+        "price": 93.62,
+        "observed_at": "2026-10-16T18:21:54-04:00",
+        "age_minutes": -0.1,
+        "session": "afterhours",
+        "status": "stale_or_wrong_session",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/SOXL/historical?assetclass=etf&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=SOXL&region=US&lang=en-US",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "items": [
+          {
+            "title": "Why Direxion Daily Semiconductor Bull 3X ETF Crashed Today",
+            "url": "https://www.fool.com/investing/2026/10/15/why-direxion-daily-semiconductor-bull-3x-etf-crashed-today/?.tsrc=rss",
+            "published_at": "2026-10-15T15:55:19+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "ETF Fund Flows: Semiconductors, Leveraged ETFs Dominate",
+            "url": "http://www.etf.com/sections/daily-etf-flows/etf-fund-flows-semiconductors-leveraged-etfs-dominate?utm_source=yahoo-finance&utm_medium=rss&utm_campaign=yahoo-finance-rss&.tsrc=rss",
+            "published_at": "2026-10-15T21:00:04+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "original_unavailable": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      "scenario": {
+        "stance": "판단 보류",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "reason": "상장 식별·데이터·교차검증 중 미충족 항목 존재",
+        "cases": [],
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "NVDA": {
+      "listing": {
+        "name": "NVIDIA Corporation - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "NVIDIA",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과",
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교",
+        "장전/시간외 관측 시세 지연 또는 세션 불일치"
+      ],
+      "indicators": null,
+      "quote": {
+        "price": 214.1754,
+        "observed_at": "2026-10-16T18:21:56-04:00",
+        "age_minutes": -0.13,
+        "session": "afterhours",
+        "status": "stale_or_wrong_session",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=NVDA&region=US&lang=en-US",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "items": [
+          {
+            "title": "Prediction: $1,000 Invested in Taiwan Semi (TSMC) Today Will Be Worth This Much by 2030.",
+            "url": "https://www.fool.com/investing/2026/10/16/prediction-1000-invested-in-taiwan-semi-tsmc-today/?.tsrc=rss",
+            "published_at": "2026-10-16T21:25:00+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Inflation Rose to 3.7% in September. Is It Time to Sell the S&P 500?",
+            "url": "https://www.fool.com/investing/2026/10/16/inflation-rose-to-3-7-in-september-is-it-time-to-sell-the-s-and-p-500/?.tsrc=rss",
+            "published_at": "2026-10-16T21:07:02+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Ladder Capital Corp Q3 2026 Earnings Call Summary",
+            "url": "https://app.moby.co/home/research/tools/earningsCalendar/earnings-ladder-capital-corp-q3-2026-earnings-call-summary?utm_source=yahoo_finance&utm_medium=rss&.tsrc=rss",
+            "published_at": "2026-10-16T20:48:34+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Nasdaq Buckles on Fear This Boom Is an AI Bubble: Stock Market Today",
+            "url": "https://www.kiplinger.com/investing/stocks/nasdaq-buckles-on-fear-this-boom-is-an-ai-bubble-stock-market-today?.tsrc=rss",
+            "published_at": "2026-10-16T20:14:11+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Here's How Many Shares of AbbVie You'd Need for $5,000 in Yearly Dividends",
+            "url": "https://www.fool.com/investing/2026/10/16/heres-how-many-shares-of-abbvie-youd-need-for-5000/?.tsrc=rss",
+            "published_at": "2026-10-16T21:48:19+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Not Alphabet. Not Microsoft. This Is the Cloud Stock I'd Buy With $5,000 Right Now.",
+            "url": "https://www.fool.com/investing/2026/10/16/not-alphabet-not-microsoft-this-is-the-cloud-stock/?.tsrc=rss",
+            "published_at": "2026-10-16T21:43:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Stocks struggle to bounce back from AI angst-fueled rout",
+            "url": "https://finance.yahoo.com/markets/world-indices/articles/asian-stocks-rise-tech-bounces-020836295.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:53:15+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "CoreWeave Sharp Sell-Off About Cost of Funding, Not Demand, Analysts Say",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/coreweave-sharp-sell-off-cost-204945626.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:49:45+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_unavailable": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      "scenario": {
+        "stance": "판단 보류",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "reason": "상장 식별·데이터·교차검증 중 미충족 항목 존재",
+        "cases": [],
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "AMD": {
+      "listing": {
+        "name": "Advanced Micro Devices, Inc. - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Advanced Micro Devices",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과",
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": null,
+      "quote": {
+        "price": 526.84,
+        "observed_at": "2026-10-16T18:20:06-04:00",
+        "age_minutes": 1.7,
+        "session": "afterhours",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/AMD/historical?assetclass=stocks&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AMD&region=US&lang=en-US",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "items": [
+          {
+            "title": "Tesla pops, tech heads for losing week: AlphaCheck",
+            "url": "https://finance.yahoo.com/markets/article/tesla-pops-tech-heads-for-losing-week-alphacheck-135820459.html?.tsrc=rss",
+            "published_at": "2026-10-16T13:58:20+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/markets/article/tesla-pops-tech-heads-for-losing-week-alphacheck-135820459.html?.tsrc=rss",
+              "retrieved_at": "2026-10-16T22:22:01.252609+00:00",
+              "sha256": "fd976d9e9fa64cfc3914bd7be988f492f95ef03444b7544d95792f9c34cb36c7",
+              "bytes": 1097001,
+              "title": "Tesla pops, tech heads for losing week: AlphaCheck",
+              "published_at": "2026-10-16T13:58:20+00:00",
+              "word_count": 261
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Entegris, Micron, AMD, Marvell Technology, and Western Digital Shares Are Falling, What You Need To Know",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/entegris-micron-amd-marvell-technology-200339901.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:03:39+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/markets/stocks/articles/entegris-micron-amd-marvell-technology-200339901.html?.tsrc=rss",
+              "retrieved_at": "2026-10-16T22:22:01.756646+00:00",
+              "sha256": "3c1ecd49c3624830fb25eef227f0e4ad66e139aae21380316c6776d792ef762e",
+              "bytes": 1085300,
+              "title": "Entegris, Micron, AMD, Marvell Technology, and Western Digital Shares Are Falling, What You Need To Know",
+              "published_at": "2026-10-16T20:03:39+00:00",
+              "word_count": 622
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Arm and AMD Fall 5% as Qualcomm Verdict Adds to Chip Selloff; Taiwan Semiconductor Slips",
+            "url": "https://247wallst.com/investing/2026/10/16/arm-and-amd-fall-5-as-qualcomm-verdict-adds-to-chip-selloff-taiwan-semiconductor-slips/?.tsrc=rss",
+            "published_at": "2026-10-16T18:10:37+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "If You Invest $1,000 in AMD Each Month Starting Now, This is What You’d Have in 5 Years",
+            "url": "https://247wallst.com/investing/2026/10/16/if-you-invest-1000-in-amd-each-month-starting-now-this-is-what-youd-have-in-5-years/?.tsrc=rss",
+            "published_at": "2026-10-16T15:00:51+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Fermi Stock Just Got a Major AMD Catalyst. How to Play FRMI Here.",
+            "url": "https://www.barchart.com/story/news/8100774/fermi-stock-just-got-a-major-amd-catalyst-how-to-play-frmi-here?.tsrc=rss",
+            "published_at": "2026-10-16T15:00:42+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Intel and AMD Drop 3% as Rotation Out of AI Chip Stocks Continues; NVIDIA Holds Steady",
+            "url": "https://247wallst.com/investing/2026/10/16/intel-and-amd-drop-3-as-rotation-out-of-ai-chip-stocks-continues-nvidia-holds-steady/?.tsrc=rss",
+            "published_at": "2026-10-16T14:54:02+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "The AI Supercycle Isn’t Slowing Down, and Nvidia’s Compute Moat Just Got Deeper.",
+            "url": "https://247wallst.com/investing/2026/10/16/the-ai-supercycle-isnt-slowing-down-and-nvidias-compute-moat-just-got-deeper/?.tsrc=rss",
+            "published_at": "2026-10-16T14:45:46+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Prediction: $1,000 Invested in Taiwan Semi (TSMC) Today Will Be Worth This Much by 2030.",
+            "url": "https://www.fool.com/investing/2026/10/16/prediction-1000-invested-in-taiwan-semi-tsmc-today/?.tsrc=rss",
+            "published_at": "2026-10-16T21:25:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_retrieved_unsubstantiated": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      "scenario": {
+        "stance": "판단 보류",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "reason": "상장 식별·데이터·교차검증 중 미충족 항목 존재",
+        "cases": [],
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "MU": {
+      "listing": {
+        "name": "Micron Technology, Inc. - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Micron",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과",
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": null,
+      "quote": {
+        "price": 873.0,
+        "observed_at": "2026-10-16T18:21:40-04:00",
+        "age_minutes": 0.14,
+        "session": "afterhours",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/MU/historical?assetclass=stocks&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=MU&region=US&lang=en-US",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "items": [
+          {
+            "title": "Prediction: Micron Could Turn $10,000 Into a Fortune by 2030",
+            "url": "https://www.fool.com/investing/2026/10/16/prediction-micron-could-turn-10000-into-a-fortune/?.tsrc=rss",
+            "published_at": "2026-10-16T20:05:00+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Entegris, Micron, AMD, Marvell Technology, and Western Digital Shares Are Falling, What You Need To Know",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/entegris-micron-amd-marvell-technology-200339901.html?.tsrc=rss",
+            "published_at": "2026-10-16T20:03:39+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/markets/stocks/articles/entegris-micron-amd-marvell-technology-200339901.html?.tsrc=rss",
+              "retrieved_at": "2026-10-16T22:22:01.756646+00:00",
+              "sha256": "3c1ecd49c3624830fb25eef227f0e4ad66e139aae21380316c6776d792ef762e",
+              "bytes": 1085300,
+              "title": "Entegris, Micron, AMD, Marvell Technology, and Western Digital Shares Are Falling, What You Need To Know",
+              "published_at": "2026-10-16T20:03:39+00:00",
+              "word_count": 622
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Micron stock tumbles despite analyst calls semiconductor selloff overblown",
+            "url": "https://www.thestreet.com/investing/stocks/micron-stock-tumbles-despite-analyst-calls-semiconductor-selloff-overblown-mu?.tsrc=rss",
+            "published_at": "2026-10-16T19:42:25+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Micron Stock’s Drop Triggers ‘Buy the Dip’ Calls. No One’s Listening.",
+            "url": "https://finance.yahoo.com/m/9ae07559-4c90-3ef7-8c5b-5e2c78fecf42/micron-stock%E2%80%99s-drop-triggers.html?.tsrc=rss",
+            "published_at": "2026-10-16T17:59:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Sterne Kessler Client Netlist Negotiates $600 Million Settlement with Micron Technology",
+            "url": "https://finance.yahoo.com/technology/articles/sterne-kessler-client-netlist-negotiates-172400860.html?.tsrc=rss",
+            "published_at": "2026-10-16T17:24:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Micron Stock Is Up 385% in One Year. Buy Now or Wait for a Pullback?",
+            "url": "https://www.tikr.com/blog/micron-stock-is-up-385-in-one-year-buy-now-or-wait-for-a-pullback?ref=yahoofinance&.tsrc=rss",
+            "published_at": "2026-10-16T16:46:31+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Micron Technology (MU) Pledges $50 Million For US Memory Research",
+            "url": "https://finance.yahoo.com/technology/articles/micron-technology-mu-pledges-50-161758771.html?.tsrc=rss",
+            "published_at": "2026-10-16T16:17:58+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Apple and Samsung Are Nearly Tied as Global Phone Shipments Collapse",
+            "url": "https://247wallst.com/investing/2026/10/16/apple-and-samsung-are-nearly-tied-as-global-phone-shipments-collapse/?.tsrc=rss",
+            "published_at": "2026-10-16T16:10:19+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_retrieved_unsubstantiated": 1,
+          "original_unavailable": 1
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      "scenario": {
+        "stance": "판단 보류",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "reason": "상장 식별·데이터·교차검증 중 미충족 항목 존재",
+        "cases": [],
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    }
+  },
+  "market": {
+    "SPY": {
+      "listing": {
+        "name": "State Street SPDR S&P 500 ETF Trust",
+        "exchange": "P",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": null,
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "S&P 500",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "일봉 검증 실패: ValueError: invalid OHLCV relationship",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과"
+      ],
+      "indicators": null,
+      "quote": null,
+      "crosscheck": {
+        "status": "missing"
+      }
+    },
+    "QQQ": {
+      "listing": {
+        "name": "Invesco QQQ Trust, Series 1",
+        "exchange": "NASDAQ",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Invesco QQQ",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과"
+      ],
+      "indicators": null,
+      "quote": null,
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/QQQ/historical?assetclass=etf&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380
+    },
+    "SMH": {
+      "listing": {
+        "name": "VanEck Semiconductor ETF",
+        "exchange": "NASDAQ",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-10-16T18:01:00-04:00",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Semiconductor",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "SPY 누락으로 상대강도와 방향 판단 불가",
+        "동일 거래일 종가/거래량 독립 교차검증 미통과"
+      ],
+      "indicators": null,
+      "quote": null,
+      "crosscheck": {
+        "status": "mismatch",
+        "reason": "secondary session differs",
+        "source": "https://api.nasdaq.com/api/quote/SMH/historical?assetclass=etf&limit=20&fromdate=2026-10-01&todate=2026-10-16",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      "daily_as_of": "2026-10-16",
+      "daily_rows": 380
+    }
+  },
+  "provenance": {
+    "daily": "Yahoo Finance via yfinance; raw OHLCV + adjusted close for outcomes",
+    "secondary": "Nasdaq historical endpoint; Stooq fallback; daily close and volume",
+    "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+  },
+  "calendar": {
+    "events": [
+      {
+        "title": "Producer Price Index for September 2026",
+        "at_utc": "2026-10-15T12:30:00+00:00",
+        "at_kst": "2026-10-15T21:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "U.S. Import and Export Price Indexes for September 2026",
+        "at_utc": "2026-10-16T12:30:00+00:00",
+        "at_kst": "2026-10-16T21:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "State Employment and Unemployment (Monthly) for September 2026",
+        "at_utc": "2026-10-20T14:00:00+00:00",
+        "at_kst": "2026-10-20T23:00:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Usual Weekly Earnings of Wage and Salary Workers for Third Quarter 2026",
+        "at_utc": "2026-10-21T14:00:00+00:00",
+        "at_kst": "2026-10-21T23:00:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "FOMC 회의 마지막 날 (결정 발표 시각 미확인)",
+        "date_et": "2026-10-28",
+        "at_utc": null,
+        "at_kst": "2026-10-28 미국 동부 날짜, KST 시각 미확인",
+        "source": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Metropolitan Area Employment and Unemployment (Monthly) for September 2026",
+        "at_utc": "2026-10-28T14:00:00+00:00",
+        "at_kst": "2026-10-28T23:00:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Quarterly Data Series on Business Employment Dynamics for First Quarter 2026",
+        "at_utc": "2026-10-28T14:00:00+00:00",
+        "at_kst": "2026-10-28T23:00:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "GDP (Advance Estimate), 3rd Quarter 2026",
+        "at_utc": "2026-10-29T12:30:00+00:00",
+        "at_kst": "2026-10-29T21:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Personal Income and Outlays, September 2026",
+        "at_utc": "2026-10-29T12:30:00+00:00",
+        "at_kst": "2026-10-29T21:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Consumer Expenditures for Annual 2025",
+        "at_utc": "2026-10-29T14:00:00+00:00",
+        "at_kst": "2026-10-29T23:00:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Employment Cost Index for Third Quarter 2026",
+        "at_utc": "2026-10-30T12:30:00+00:00",
+        "at_kst": "2026-10-30T21:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/10_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Job Openings and Labor Turnover Survey for September 2026",
+        "at_utc": "2026-11-03T15:00:00+00:00",
+        "at_kst": "2026-11-04T00:00:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "U.S. International Trade in Goods and Services, September 2026",
+        "at_utc": "2026-11-04T13:30:00+00:00",
+        "at_kst": "2026-11-04T22:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Productivity and Costs (P) for Third Quarter 2026",
+        "at_utc": "2026-11-05T13:30:00+00:00",
+        "at_kst": "2026-11-05T22:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Employment Situation for October 2026",
+        "at_utc": "2026-11-06T13:30:00+00:00",
+        "at_kst": "2026-11-06T22:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Consumer Price Index for October 2026",
+        "at_utc": "2026-11-10T13:30:00+00:00",
+        "at_kst": "2026-11-10T22:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Real Earnings for October 2026",
+        "at_utc": "2026-11-10T13:30:00+00:00",
+        "at_kst": "2026-11-10T22:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Producer Price Index for October 2026",
+        "at_utc": "2026-11-13T13:30:00+00:00",
+        "at_kst": "2026-11-13T22:30:00+09:00",
+        "source": "https://www.bls.gov/schedule/2026/11_sched_list.htm",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "BLS",
+        "url": "https://www.bls.gov/schedule/news_release/bls.ics",
+        "status": "official_snapshot_fallback",
+        "verified_at_utc": "2026-10-15T16:33:05.209740+00:00",
+        "age_hours": 29.81,
+        "expires_at_utc": "2026-10-17T16:33:05.209740+00:00",
+        "verification_method": "official_monthly_list_review_via_web_tool",
+        "live_access": "unavailable"
+      },
+      {
+        "name": "BEA",
+        "url": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "status": "live",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      },
+      {
+        "name": "Federal Reserve",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "status": "live",
+        "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      {
+        "source": "https://www.bls.gov/schedule/news_release/bls.ics",
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      {
+        "source": "BLS monthly HTML",
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      {
+        "source": "FRED major BLS calendar",
+        "error": "ReadTimeout",
+        "http_status": null
+      }
+    ],
+    "missing": [
+      "FOMC 정확한 발표 시각·소매판매·기업 실적 일정 미수집",
+      "발표 실제치·컨센서스·이전치 미수집"
+    ],
+    "coverage": "BLS·BEA 발표 일정 및 FOMC 날짜. FRED 대체 경로는 CPI·PPI·고용보고서 3종만 포함. 그 외 BLS 발표는 미수집. 저장된 BLS 사본은 최대 48시간 유효하며 실시간 조회와 구분."
+  },
+  "outcomes": [
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    }
+  ],
+  "listing_sources": [
+    {
+      "url": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+      "file_created_at": "2026-10-16T18:01:00-04:00",
+      "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+    },
+    {
+      "url": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+      "file_created_at": "2026-10-16T18:01:00-04:00",
+      "retrieved_at": "2026-10-16T22:21:48.298440+00:00"
+    }
+  ],
+  "listing_errors": [],
+  "core_price_volume_verified": false,
+  "outcome_summary": {
+    "5": {
+      "evaluated": 0,
+      "pending": 7,
+      "missing_data": 0,
+      "directional_sample_size": 0,
+      "direction_accuracy": null,
+      "mean_excess_return": null
+    },
+    "10": {
+      "evaluated": 0,
+      "pending": 7,
+      "missing_data": 0,
+      "directional_sample_size": 0,
+      "direction_accuracy": null,
+      "mean_excess_return": null
+    },
+    "20": {
+      "evaluated": 0,
+      "pending": 7,
+      "missing_data": 0,
+      "directional_sample_size": 0,
+      "direction_accuracy": null,
+      "mean_excess_return": null
+    }
+  }
+}
