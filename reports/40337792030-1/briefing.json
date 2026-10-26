@@ -1,0 +1,27 @@
+{
+  "schema_version": "3.1",
+  "generated_at_utc": "2026-10-26T14:15:17.730465+00:00",
+  "generated_at_kst": "2026-10-26T23:15:17.730465+09:00",
+  "mode": "premarket",
+  "context": {
+    "last_completed_session": "2026-10-23",
+    "market_date": "2026-10-26",
+    "scheduled_session_valid": false
+  },
+  "status": "skipped_nontrading_or_wrong_window",
+  "symbols": {},
+  "market": {},
+  "provenance": {
+    "daily": "Yahoo Finance via yfinance; raw OHLCV + adjusted close for outcomes",
+    "secondary": "Nasdaq historical endpoint; Stooq fallback; daily close and volume",
+    "retrieved_at": "2026-10-26T14:15:17.730465+00:00"
+  },
+  "calendar": {
+    "events": [],
+    "sources": [],
+    "errors": [],
+    "missing": [],
+    "coverage": "not collected"
+  },
+  "outcomes": []
+}
