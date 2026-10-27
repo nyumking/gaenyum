@@ -12,7 +12,7 @@ from .audit import write_receipt
 from .news_verify import verify_feed
 
 
-def build(now, mode, state, scheduled=False):
+def build(now, mode, state, scheduled=False, clock=None):
     context = session_context(now, mode)
     result = {'schema_version': '3.1', 'generated_at_utc': now.isoformat(),
         'generated_at_kst': now.astimezone(ZoneInfo('Asia/Seoul')).isoformat(),
@@ -73,13 +73,14 @@ def build(now, mode, state, scheduled=False):
             row['missing'] += row['official_filings']['missing']
         except Exception as exc:
             row['official_filings'] = {'status': 'unavailable', 'items': [], 'error': type(exc).__name__,
-                'http_status': getattr(getattr(exc, 'response', None), 'status_code', None)}
+                'http_status': getattr(getattr(exc, 'response', None), 'status_code', None),
+                'endpoint': safe_endpoint(exc)}
             row['missing'].append(f'공식 공시 수집 실패: {type(exc).__name__}')
         if row.get('news'):
             row['news'] = verify_feed(row['news'], symbol, row.get('official_filings', {}), now, news_cache)
         if symbol in histories:
             try:
-                row['quote'] = p.quote(symbol, now, mode)
+                row['quote'] = p.quote(symbol, now, mode, **({'clock': clock} if clock else {}))
                 row['missing'] += row['quote']['missing']
                 if row['quote']['status'] != 'indicative_unverified':
                     row['missing'].append('장전/시간외 관측 시세 지연 또는 세션 불일치')
@@ -94,17 +95,41 @@ def build(now, mode, state, scheduled=False):
         row['scenario']['basis'] = '완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님'
         result['symbols'][symbol] = row
     result['calendar'] = p.economic_calendar(now, state)
-    degraded = (any(r['scenario']['stance'] == '판단 보류' for r in result['symbols'].values())
-                or bool(result['calendar']['errors'])
-                or any(r.get('official_filings', {}).get('status') in ['configuration_required', 'issuer_unresolved', 'unavailable', 'metadata_only', 'fund_series_unconfirmed'] for r in result['symbols'].values())
-                or any(any('수집 실패' in m or '시세 실패' in m for m in r['missing']) for r in result['symbols'].values()))
-    result['status'] = 'degraded' if degraded else 'partial'
+    result['quality_failures'] = quality_failures(result)
+    result['status'] = 'degraded' if result['quality_failures'] else 'partial'
     result['core_price_volume_verified'] = all(r['crosscheck']['status'] == 'verified' for r in rows.values())
     if context['scheduled_session_valid']:
         save_snapshot(result, Path(state)/'forecasts')
     result['outcomes'] = evaluate(Path(state)/'forecasts', histories, now)
     result['outcome_summary'] = summarize(result['outcomes'])
     return result
+
+
+def safe_endpoint(exc):
+    # Never expose response bodies, query strings, headers or contact secrets.
+    from urllib.parse import urlsplit
+    url = getattr(getattr(exc, 'response', None), 'url', '') or ''
+    parsed = urlsplit(url)
+    if parsed.hostname in {'www.sec.gov', 'data.sec.gov', 'sec.gov'}:
+        return f'https://{parsed.hostname}{parsed.path}'
+    return None
+
+
+def quality_failures(result):
+    failures = []
+    for symbol, row in result['symbols'].items():
+        if row['scenario']['stance'] == '판단 보류':
+            failures.append({'scope': symbol, 'code': 'technical_analysis_unverified'})
+        filings = row.get('official_filings', {})
+        if filings.get('status') in {'configuration_required', 'issuer_unresolved', 'unavailable', 'metadata_only', 'fund_series_unconfirmed'}:
+            failures.append({'scope': symbol, 'code': 'official_filings_unverified',
+                'status': filings['status'], 'http_status': filings.get('http_status'),
+                'endpoint': filings.get('endpoint')})
+        if any('수집 실패' in m or '시세 실패' in m for m in row['missing']):
+            failures.append({'scope': symbol, 'code': 'collection_failure'})
+    for error in result['calendar']['errors']:
+        failures.append({'scope': 'calendar', 'code': 'calendar_unavailable', **error})
+    return failures
 
 
 def _validate_secondary(frame):
@@ -122,10 +147,13 @@ def main():
     parser.add_argument('--state', type=Path, default=Path('state'))
     parser.add_argument('--scheduled', action='store_true')
     args = parser.parse_args()
-    result = build(datetime.now(timezone.utc), args.mode, args.state, args.scheduled)
+    result = build(datetime.now(timezone.utc), args.mode, args.state, args.scheduled,
+                   clock=lambda: datetime.now(timezone.utc))
     write_report(result, args.output)
     write_receipt(result, args.output)
     print(f"Briefing status: {result['status']}; output: {args.output}")
+    for failure in result.get('quality_failures', []):
+        print(f"Quality failure: {failure}")
     # Data degradation is a visible job failure while artifacts are still uploaded.
     return 2 if result['status'] == 'degraded' else 0
 

@@ -163,7 +163,9 @@ def bls_calendar(now, fetcher, cache_path):
         except (OSError, ValueError, KeyError, TypeError):
             continue
     if not valid:
-        raise ValueError('BLS live sources unavailable; no unexpired official snapshot')
+        exc = ValueError('BLS live sources unavailable; no unexpired official snapshot')
+        exc.attempts = failures
+        raise exc
     data = max(valid, key=lambda x: x['verified_at_utc'])
     return data['events'], {'name': 'BLS', 'url': BLS, 'status': 'official_snapshot_fallback',
         'verified_at_utc': data['verified_at_utc'], 'age_hours': data['age_hours'],
@@ -179,6 +181,7 @@ def collect(now, fetcher, fomc_parser, state):
         sources.append(source)
         warnings.extend(attempts)
     except Exception as exc:
+        warnings.extend(getattr(exc, 'attempts', []))
         errors.append({'source': BLS, 'error': type(exc).__name__, 'reason': 'live unavailable and snapshot missing/expired'})
     try:
         events.extend(parse_ics(fetcher(BEA), BEA, now))

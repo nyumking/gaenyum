@@ -76,11 +76,12 @@ def stooq_daily(symbol, cutoff):
         raise ValueError('secondary data missing')
     return frame, url
 
-def quote(symbol, now, mode):
+def quote(symbol, now, mode, clock=None):
     """Separate actual extended-hours observations from completed daily candles."""
     frame = yf.Ticker(symbol).history(period='1d', interval='1m', prepost=True, auto_adjust=False)
     if frame.empty:
         raise ValueError('no intraday quote')
+    now = clock() if clock else now
     row = frame.iloc[-1]
     stamp = pd.Timestamp(frame.index[-1])
     age = (pd.Timestamp(now)-stamp).total_seconds()/60
@@ -89,6 +90,7 @@ def quote(symbol, now, mode):
     expected = 'premarket' if mode == 'premarket' else 'afterhours'
     fresh = 0 <= age <= 30 and session == expected and et.date() == pd.Timestamp(now).tz_convert('America/New_York').date()
     return {'price': float(row.Close), 'observed_at': stamp.isoformat(), 'age_minutes': round(age, 2),
+            'checked_at': pd.Timestamp(now).isoformat(),
             'session': session, 'status': 'indicative_unverified' if fresh else 'stale_or_wrong_session',
             'source': 'Yahoo Finance 1m; indicative, not a consolidated real-time feed',
             'premarket_volume': None, 'premarket_same_time_rvol': None,
