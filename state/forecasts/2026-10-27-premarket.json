@@ -1,0 +1,42 @@
+{
+  "id": "2026-10-27-premarket",
+  "generated_at": "2026-10-27T12:24:22.434058+00:00",
+  "entry_rule": "first regular-session open strictly after generation",
+  "decisions": {
+    "HIMS": {
+      "stance": "부정",
+      "signal_session": "2026-10-26",
+      "signal_close": 27.59
+    },
+    "TSLA": {
+      "stance": "긍정",
+      "signal_session": "2026-10-26",
+      "signal_close": 391.619995
+    },
+    "SPCX": {
+      "stance": "부정",
+      "signal_session": "2026-10-26",
+      "signal_close": 146.899994
+    },
+    "SOXL": {
+      "stance": "부정",
+      "signal_session": "2026-10-26",
+      "signal_close": 90.5
+    },
+    "NVDA": {
+      "stance": "부정",
+      "signal_session": "2026-10-26",
+      "signal_close": 216.0
+    },
+    "AMD": {
+      "stance": "부정",
+      "signal_session": "2026-10-26",
+      "signal_close": 531.280029
+    },
+    "MU": {
+      "stance": "부정",
+      "signal_session": "2026-10-26",
+      "signal_close": 903.700012
+    }
+  }
+}
