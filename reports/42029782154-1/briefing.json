@@ -1,0 +1,4935 @@
+{
+  "schema_version": "3.1",
+  "generated_at_utc": "2026-11-05T12:46:04.695306+00:00",
+  "generated_at_kst": "2026-11-05T21:46:04.695306+09:00",
+  "mode": "premarket",
+  "context": {
+    "last_completed_session": "2026-11-04",
+    "market_date": "2026-11-05",
+    "scheduled_session_valid": true
+  },
+  "status": "degraded",
+  "symbols": {
+    "HIMS": {
+      "listing": {
+        "name": "Hims & Hers Health, Inc. Class A Common Stock",
+        "exchange": "N",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": null,
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Hims",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": {
+        "close": 26.66,
+        "rsi_14": 43.559694,
+        "macd": -0.652675,
+        "macd_signal": -0.367396,
+        "macd_histogram": -0.285279,
+        "atr_14": 1.932624,
+        "volume": 11618200.0,
+        "prior_volume_avg_20": 9906200.0,
+        "rvol_20": 1.172821,
+        "volume_5_vs_prior5": 0.09985,
+        "obv": -56728500.0,
+        "obv_change_5": 4914300.0,
+        "dollar_volume": 309741210.227203,
+        "rs_20_vs_spy": -0.084101,
+        "support_20": 25.145,
+        "resistance_20": 31.790001,
+        "sma_5": 26.99,
+        "sma_10": 27.662,
+        "sma_20": 28.3845,
+        "sma_50": 28.6586,
+        "sma_200": 26.95265
+      },
+      "quote": {
+        "price": 26.69,
+        "observed_at": "2026-11-05T07:43:20-05:00",
+        "age_minutes": 2.91,
+        "checked_at": "2026-11-05T12:46:14.520727+00:00",
+        "session": "premarket",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 5.723476803609628e-09,
+        "volume_relative_difference": 0.0015391741741870302,
+        "secondary_close": 26.66,
+        "secondary_volume": 11636110.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/HIMS/historical?assetclass=stocks&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=HIMS&region=US&lang=en-US",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "items": [
+          {
+            "title": "Can Hims & Hers Stock Rally 50% After This Dip?",
+            "url": "https://www.trefis.com/stock/hims/articles/621903/can-hims-hers-stock-rally-50-after-this-dip/2026-11-02?.tsrc=rss",
+            "published_at": "2026-11-02T16:30:35+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "HTTPError",
+              "http_status": 404
+            }
+          },
+          {
+            "title": "Hims & Hers Health, Inc. (HIMS) Gains As Market Dips: What You Should Know",
+            "url": "https://finance.yahoo.com/news/hims-hers-health-inc-hims-204504980.html?.tsrc=rss",
+            "published_at": "2026-10-29T20:45:04+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/news/hims-hers-health-inc-hims-204504980.html?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:14.169050+00:00",
+              "sha256": "4538761392451a09a68956b01efe8d9848f3a83fc70e1ba6a23783376bb472e9",
+              "bytes": 1072392,
+              "title": "Hims & Hers Health, Inc. (HIMS) Gains As Market Dips: What You Should Know",
+              "published_at": "2026-10-29T20:45:04+00:00",
+              "word_count": 473
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Teladoc Soars 11% on Q3 Beat and Raised Outlook as “Insurance Revenue Exceeded Our Expectations”",
+            "url": "https://www.tikr.com/blog/teladoc-soars-11-on-q3-beat-and-raised-outlook-as-insurance-revenue-exceeded-our-expectations?ref=yahoofinance&.tsrc=rss",
+            "published_at": "2026-10-29T19:00:59+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Eli Lilly Jumps 8% as Strong Quarter Lifts Revenue Outlook; Novo Nordisk Ticks Up, Viking Therapeutics Eases",
+            "url": "https://247wallst.com/investing/2026/10/29/eli-lilly-jumps-8-as-strong-quarter-lifts-revenue-outlook-novo-nordisk-ticks-up-viking-therapeutics-eases/?.tsrc=rss",
+            "published_at": "2026-10-29T14:03:24+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Eli Lilly Soars 5% as Mounjaro and Zepbound Demand Drives $5.5 Billion Guidance Raise",
+            "url": "https://www.tikr.com/blog/eli-lilly-soars-5-as-mounjaro-and-zepbound-demand-drives-5-5-billion-guidance-raise?ref=yahoofinance&.tsrc=rss",
+            "published_at": "2026-10-29T17:03:22+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 3,
+          "original_retrieved_unsubstantiated": 1,
+          "original_unavailable": 1
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403,
+        "endpoint": "https://data.sec.gov/submissions/CIK0001773751.json"
+      },
+      "scenario": {
+        "stance": "부정",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "method": "종가>SMA20, MACD histogram>0, SPY 대비 RS20>0, OBV5>0: 3–4 긍정 / 0–1 부정 / 2 중립",
+        "cases": [
+          {
+            "case": "상승",
+            "condition": "완료 종가가 20일 저항 31.79 돌파, RVOL≥1.2 확인",
+            "reference": 35.66,
+            "invalidated_below": 29.86
+          },
+          {
+            "case": "기본",
+            "condition": "20일 지지 25.14~저항 31.79 범위 유지",
+            "reference": null
+          },
+          {
+            "case": "하락",
+            "condition": "완료 종가가 20일 지지 25.14 이탈",
+            "reference": 21.28,
+            "invalidated_above": 27.08
+          }
+        ],
+        "risk": "ATR 배수는 조건부 참고 구간이며 확률·목표수익 보장이 아님. 뉴스/경제 발표에 따라 무효화 가능.",
+        "product_risk": null,
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "TSLA": {
+      "listing": {
+        "name": "Tesla, Inc.  - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Tesla",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": {
+        "close": 385.190002,
+        "rsi_14": 51.375481,
+        "macd": 8.191893,
+        "macd_signal": 7.482708,
+        "macd_histogram": 0.709185,
+        "atr_14": 14.088578,
+        "volume": 47673700.0,
+        "prior_volume_avg_20": 36298680.0,
+        "rvol_20": 1.313373,
+        "volume_5_vs_prior5": -0.173951,
+        "obv": 2004481800.0,
+        "obv_change_5": -95775800.0,
+        "dollar_volume": 18363432619.39087,
+        "rs_20_vs_spy": 0.032927,
+        "support_20": 349.329987,
+        "resistance_20": 414.230011,
+        "sma_5": 398.123999,
+        "sma_10": 394.071997,
+        "sma_20": 383.212,
+        "sma_50": 372.111599,
+        "sma_200": 384.759549
+      },
+      "quote": {
+        "price": 377.18,
+        "observed_at": "2026-11-05T07:46:11-05:00",
+        "age_minutes": 0.08,
+        "checked_at": "2026-11-05T12:46:15.888261+00:00",
+        "session": "premarket",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 6.338187086285529e-09,
+        "volume_relative_difference": 0.0027638888394992955,
+        "secondary_close": 385.19,
+        "secondary_volume": 47805830.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/TSLA/historical?assetclass=stocks&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=TSLA&region=US&lang=en-US",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "items": [
+          {
+            "title": "Apple Vs. Tesla: Low CapEx Only Matters if Non-Cyclical Cash Flows Come With It",
+            "url": "https://247wallst.com/investing/2026/11/05/apple-vs-tesla-low-capex-only-matters-if-non-cyclical-cash-flows-come-with-it/?.tsrc=rss",
+            "published_at": "2026-11-05T12:15:57+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://247wallst.com/investing/2026/11/05/apple-vs-tesla-low-capex-only-matters-if-non-cyclical-cash-flows-come-with-it/?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:15.176557+00:00",
+              "sha256": "7366583156fa6b59f4d39c216adb5ad54b6c3a5b262ad81bb8ed463dc8449a90",
+              "bytes": 329110,
+              "title": "Apple Vs. Tesla: Low CapEx Only Matters if Non-Cyclical Cash Flows Come With It",
+              "published_at": "2026-11-05T12:15:57+00:00",
+              "word_count": 675
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Tesla (TSLA) Faces Texas Democratic Sweep That Threatens AI And Autonomy Plans",
+            "url": "https://finance.yahoo.com/technology/ai/articles/tesla-tsla-faces-texas-democratic-111123725.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:11:23+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/technology/ai/articles/tesla-tsla-faces-texas-democratic-111123725.html?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:15.639552+00:00",
+              "sha256": "bfc7237b13b0032f72945b83382792dbd47ee27d4b8efc89964b54b5dfe08699",
+              "bytes": 1087409,
+              "title": "Tesla (TSLA) Faces Texas Democratic Sweep That Threatens AI And Autonomy Plans",
+              "published_at": "2026-11-05T11:11:23+00:00",
+              "word_count": 560
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "State Street Consumer Discretionary (XLY) Sells $50 Million of Amazon on Nov. 3",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/state-street-consumer-discretionary-xly-110539860.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:05:39+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "What the Democratic landslide means for GOP booster Elon Musk and his businesses",
+            "url": "https://finance.yahoo.com/technology/ai/articles/democratic-landslide-means-gop-booster-110000010.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:00:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "US Futures Mixed After Rally On Wednesday — MU, TSLA, AAPL, MSFT, APP, NVDA, IREN In Focus",
+            "url": "https://stocktwits.com/news-articles/markets/equity/us-futures-mixed-after-rally-on-wednesday-mu-tsla-aapl-msft-app-nvda-iren-in-focus/cNG1WKIR9EY?.tsrc=rss",
+            "published_at": "2026-11-05T10:10:26+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "TSLA Stock Slips Overnight: Analysts Flag Political, Premium Risks To SpaceX Merger — Cathie Wood’s ARK Buys Anyway",
+            "url": "https://stocktwits.com/news-articles/markets/equity/tsla-stock-analysts-political-premium-risks-spacex-merger-cathie-wood-s-ark-buys/cNG14rwR9EL?.tsrc=rss",
+            "published_at": "2026-11-05T05:22:12+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla, Uber Could Triple In 5 Years? Elon Musk Ally Jason Calacanis Says Both Stocks Are ‘50% Undervalued’",
+            "url": "https://stocktwits.com/news-articles/markets/equity/tesla-uber-triple-5-years-elon-musk-ally-jason-calacanis-both-stocks-undervalued/cNG1d6SR9EQ?.tsrc=rss",
+            "published_at": "2026-11-05T04:15:25+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Tesla Registrations Explode Across Europe as Iran War Sends Fuel Prices Soaring — But BYD and Chinese EV Rivals Are Gaining Fast",
+            "url": "https://finance.yahoo.com/energy/articles/tesla-registrations-explode-across-europe-003014737.html?.tsrc=rss",
+            "published_at": "2026-11-05T00:30:14+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_retrieved_unsubstantiated": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403,
+        "endpoint": "https://data.sec.gov/submissions/CIK0001318605.json"
+      },
+      "scenario": {
+        "stance": "긍정",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "method": "종가>SMA20, MACD histogram>0, SPY 대비 RS20>0, OBV5>0: 3–4 긍정 / 0–1 부정 / 2 중립",
+        "cases": [
+          {
+            "case": "상승",
+            "condition": "완료 종가가 20일 저항 414.23 돌파, RVOL≥1.2 확인",
+            "reference": 442.41,
+            "invalidated_below": 400.14
+          },
+          {
+            "case": "기본",
+            "condition": "20일 지지 349.33~저항 414.23 범위 유지",
+            "reference": null
+          },
+          {
+            "case": "하락",
+            "condition": "완료 종가가 20일 지지 349.33 이탈",
+            "reference": 321.15,
+            "invalidated_above": 363.42
+          }
+        ],
+        "risk": "ATR 배수는 조건부 참고 구간이며 확률·목표수익 보장이 아님. 뉴스/경제 발표에 따라 무효화 가능.",
+        "product_risk": null,
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "SPCX": {
+      "listing": {
+        "name": "Space Exploration Technologies Corp. - Class A Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Space",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": {
+        "close": 135.919998,
+        "rsi_14": 40.092684,
+        "macd": -3.739803,
+        "macd_signal": -1.996383,
+        "macd_histogram": -1.74342,
+        "atr_14": 7.46891,
+        "volume": 135034700.0,
+        "prior_volume_avg_20": 100503240.0,
+        "rvol_20": 1.343586,
+        "volume_5_vs_prior5": -0.190139,
+        "obv": -507503500.0,
+        "obv_change_5": -161815300.0,
+        "dollar_volume": 18353916176.74408,
+        "rs_20_vs_spy": -0.175628,
+        "support_20": 133.139999,
+        "resistance_20": 167.600006,
+        "sma_5": 138.441998,
+        "sma_10": 142.515999,
+        "sma_20": 148.506499,
+        "sma_50": 149.635001,
+        "sma_200": null
+      },
+      "quote": {
+        "price": 132.55,
+        "observed_at": "2026-11-05T07:46:15-05:00",
+        "age_minutes": 0.04,
+        "checked_at": "2026-11-05T12:46:17.387404+00:00",
+        "session": "premarket",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 1.3471561755018513e-08,
+        "volume_relative_difference": 0.0030174966074389964,
+        "secondary_close": 135.92,
+        "secondary_volume": 135443400.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/SPCX/historical?assetclass=stocks&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 101,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=SPCX&region=US&lang=en-US",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "items": [
+          {
+            "title": "Market Chatter: Goldman Sachs, Apollo Begin Marketing $40 Billion SpaceX Chip Financing Deal",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/market-chatter-goldman-sachs-apollo-122044595.html?.tsrc=rss",
+            "published_at": "2026-11-05T12:20:44+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "SpaceX (SPCX) Stock May Trade Below Fair Value On Fresh AI Compute News",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-spcx-stock-may-trade-121235029.html?.tsrc=rss",
+            "published_at": "2026-11-05T12:12:35+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/markets/stocks/articles/spacex-spcx-stock-may-trade-121235029.html?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:17.146857+00:00",
+              "sha256": "5aced3716002181c5de7bbec176a1d6ad252c3753914345aa0a18bc6e5396411",
+              "bytes": 1072772,
+              "title": "SpaceX (SPCX) Stock May Trade Below Fair Value On Fresh AI Compute News",
+              "published_at": "2026-11-05T12:12:35+00:00",
+              "word_count": 740
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Morgan Stanley Sees SpaceX Stock Hitting $300 as AI Forecasts Explode",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/morgan-stanley-sees-spacex-stock-120153313.html?.tsrc=rss",
+            "published_at": "2026-11-05T12:01:53+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Musk bet big on keeping Texas red. What happens to his business empire now?",
+            "url": "https://www.cnn.com/2026/11/05/business/musk-texas-donations-midterms-spacex-tesla?.tsrc=rss",
+            "published_at": "2026-11-05T12:00:15+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Elon Musk's SpaceX Is Preparing a December Stock Gift for Millions of Kids — Trump Accounts to Receive Shares as Another Round of Beneficiaries Gets Added",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/elon-musks-spacex-preparing-december-110005626.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:00:05+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "What the Democratic landslide means for GOP booster Elon Musk and his businesses",
+            "url": "https://finance.yahoo.com/technology/ai/articles/democratic-landslide-means-gop-booster-110000010.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:00:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "4 Reasons I Won't Be Touching the Anthropic IPO With a 10-Foot Pole",
+            "url": "https://www.fool.com/investing/2026/11/05/4-reasons-i-wont-be-touching-the-anthropic-ipo-with-a-10-foot-pole/?.tsrc=rss",
+            "published_at": "2026-11-05T10:26:02+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "SpaceX's Power Bill Is Getting Bigger. Should You Buy the Stock Now or Wait for a Solution?",
+            "url": "https://www.fool.com/investing/2026/11/05/spacexs-power-bill-is-getting-bigger-should-you-bu/?.tsrc=rss",
+            "published_at": "2026-11-05T10:20:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_retrieved_unsubstantiated": 1,
+          "original_unavailable": 1
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403,
+        "endpoint": "https://data.sec.gov/submissions/CIK0001181412.json"
+      },
+      "scenario": {
+        "stance": "부정",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "method": "종가>SMA20, MACD histogram>0, SPY 대비 RS20>0, OBV5>0: 3–4 긍정 / 0–1 부정 / 2 중립",
+        "cases": [
+          {
+            "case": "상승",
+            "condition": "완료 종가가 20일 저항 167.60 돌파, RVOL≥1.2 확인",
+            "reference": 182.54,
+            "invalidated_below": 160.13
+          },
+          {
+            "case": "기본",
+            "condition": "20일 지지 133.14~저항 167.60 범위 유지",
+            "reference": null
+          },
+          {
+            "case": "하락",
+            "condition": "완료 종가가 20일 지지 133.14 이탈",
+            "reference": 118.2,
+            "invalidated_above": 140.61
+          }
+        ],
+        "risk": "ATR 배수는 조건부 참고 구간이며 확률·목표수익 보장이 아님. 뉴스/경제 발표에 따라 무효화 가능.",
+        "product_risk": null,
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "SOXL": {
+      "listing": {
+        "name": "Direxion Daily Semiconductor Bull 3X ETF",
+        "exchange": "P",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": null,
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Daily Semiconductor Bull",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": {
+        "close": 66.68,
+        "rsi_14": 32.576789,
+        "macd": -15.104873,
+        "macd_signal": -12.016921,
+        "macd_histogram": -3.087952,
+        "atr_14": 13.027483,
+        "volume": 243590100.0,
+        "prior_volume_avg_20": 107374965.0,
+        "rvol_20": 2.268593,
+        "volume_5_vs_prior5": 0.507039,
+        "obv": 2874625900.0,
+        "obv_change_5": -564135300.0,
+        "dollar_volume": 16242587942.3378,
+        "rs_20_vs_spy": -0.566998,
+        "support_20": 62.23,
+        "resistance_20": 155.5,
+        "sma_5": 77.482001,
+        "sma_10": 85.201,
+        "sma_20": 100.063,
+        "sma_50": 118.277,
+        "sma_200": 124.40485
+      },
+      "quote": {
+        "price": 59.2798,
+        "observed_at": "2026-11-05T07:46:17-05:00",
+        "age_minutes": 0.04,
+        "checked_at": "2026-11-05T12:46:19.208544+00:00",
+        "session": "premarket",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 4.576721224225366e-09,
+        "volume_relative_difference": 0.013920239259551881,
+        "secondary_close": 66.68,
+        "secondary_volume": 247028800.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/SOXL/historical?assetclass=etf&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=SOXL&region=US&lang=en-US",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "items": [
+          {
+            "title": "Dip Buyers in Leveraged Tech ETFs Are Getting Crushed",
+            "url": "https://247wallst.com/investing/2026/11/03/dip-buyers-in-leveraged-tech-etfs-are-getting-crushed/?.tsrc=rss",
+            "published_at": "2026-11-03T13:35:57+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://247wallst.com/investing/2026/11/03/dip-buyers-in-leveraged-tech-etfs-are-getting-crushed/?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:18.792508+00:00",
+              "sha256": "9877a282ea0fb96faae48daa60f2b5b65b587dc6ecdf403e3c25701d14c7ade8",
+              "bytes": 331238,
+              "title": "Dip Buyers in Leveraged Tech ETFs Are Getting Crushed",
+              "published_at": "2026-11-03T13:35:57+00:00",
+              "word_count": 737
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Dow, S&P 500, Nasdaq Futures Fall As Markets Weigh A Potential Democratic Sweep In Midterms: DJT, AMD, SMCI, SOXL In Focus",
+            "url": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-fall-as-markets-weigh-a-potential-democratic-sweep-in-midterms-djt-amd-smci-soxl-in-focus/cNGhx2NR9dY?.tsrc=rss",
+            "published_at": "2026-11-04T03:09:31+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://stocktwits.com/news-articles/markets/equity/dow-s-and-p-500-nasdaq-futures-fall-as-markets-weigh-a-potential-democratic-sweep-in-midterms-djt-amd-smci-soxl-in-focus/cNGhx2NR9dY?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:19.017741+00:00",
+              "sha256": "d6a40f14f1f1b26d668e53e1eb28a428ac24130827d951cff3be5c35680a16bf",
+              "bytes": 306148,
+              "title": "Why Are Nasdaq Futures Falling As Democrats Close In On Congress?",
+              "published_at": "2026-11-04T03:09:31+00:00",
+              "word_count": 842
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "original_retrieved_unsubstantiated": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403,
+        "endpoint": "https://data.sec.gov/submissions/CIK0001424958.json"
+      },
+      "scenario": {
+        "stance": "부정",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "method": "종가>SMA20, MACD histogram>0, SPY 대비 RS20>0, OBV5>0: 3–4 긍정 / 0–1 부정 / 2 중립",
+        "cases": [
+          {
+            "case": "상승",
+            "condition": "완료 종가가 20일 저항 155.50 돌파, RVOL≥1.2 확인",
+            "reference": 181.55,
+            "invalidated_below": 142.47
+          },
+          {
+            "case": "기본",
+            "condition": "20일 지지 62.23~저항 155.50 범위 유지",
+            "reference": null
+          },
+          {
+            "case": "하락",
+            "condition": "완료 종가가 20일 지지 62.23 이탈",
+            "reference": 36.18,
+            "invalidated_above": 75.26
+          }
+        ],
+        "risk": "ATR 배수는 조건부 참고 구간이며 확률·목표수익 보장이 아님. 뉴스/경제 발표에 따라 무효화 가능.",
+        "product_risk": "SOXL은 일일 3배 레버리지 ETF: 복리·경로 의존으로 여러 날 수익률은 단순 3배가 아님.",
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "NVDA": {
+      "listing": {
+        "name": "NVIDIA Corporation - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "NVIDIA",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": {
+        "close": 200.130005,
+        "rsi_14": 34.537294,
+        "macd": -5.306672,
+        "macd_signal": -3.496522,
+        "macd_histogram": -1.81015,
+        "atr_14": 6.472955,
+        "volume": 148337800.0,
+        "prior_volume_avg_20": 100185965.0,
+        "rvol_20": 1.480625,
+        "volume_5_vs_prior5": 0.276752,
+        "obv": 3354587000.0,
+        "obv_change_5": -421621100.0,
+        "dollar_volume": 29686844638.305664,
+        "rs_20_vs_spy": -0.143847,
+        "support_20": 199.679993,
+        "resistance_20": 237.070007,
+        "sma_5": 205.436002,
+        "sma_10": 209.967003,
+        "sma_20": 216.123002,
+        "sma_50": 221.201201,
+        "sma_200": 204.6722
+      },
+      "quote": {
+        "price": 197.21,
+        "observed_at": "2026-11-05T07:46:15-05:00",
+        "age_minutes": 0.09,
+        "checked_at": "2026-11-05T12:46:20.299736+00:00",
+        "session": "premarket",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 2.4398203679609765e-08,
+        "volume_relative_difference": 0.004666742264983759,
+        "secondary_close": 200.13,
+        "secondary_volume": 149033300.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/NVDA/historical?assetclass=stocks&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=NVDA&region=US&lang=en-US",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "items": [
+          {
+            "title": "How the AI boom might affect your career: Fireworks AI CEO",
+            "url": "https://finance.yahoo.com/video/ai-boom-might-affect-career-120000909.html?.tsrc=rss",
+            "published_at": "2026-11-05T12:00:00+00:00",
+            "verification": "video_transcript_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unsupported_video"
+            }
+          },
+          {
+            "title": "America just voted against AI. That might be good.",
+            "url": "https://finance.yahoo.com/video/america-just-voted-against-ai-120000953.html?.tsrc=rss",
+            "published_at": "2026-11-05T12:00:00+00:00",
+            "verification": "video_transcript_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unsupported_video"
+            }
+          },
+          {
+            "title": "These 6 Stocks Make Up a Big Share of the S&P 500",
+            "url": "https://www.fool.com/investing/2026/11/05/these-6-stocks-make-up-a-big-share-of-the-sp-500/?.tsrc=rss",
+            "published_at": "2026-11-05T12:29:00+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "As Democrats Take Control of Congress, Warren Buffett Has a Timely Warning for Investors",
+            "url": "https://www.fool.com/investing/2026/11/05/as-democrats-take-control-of-congress-warren-buffe/?.tsrc=rss",
+            "published_at": "2026-11-05T12:20:00+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Nvidia chips stockpile in Hong Kong awaits China import approval - report",
+            "url": "https://finance.yahoo.com/technology/ai/articles/nvidia-chips-stockpile-hong-kong-120548918.html?.tsrc=rss",
+            "published_at": "2026-11-05T12:05:48+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Nvidia Investors Need to Be Paying Attention on Nov. 17",
+            "url": "https://www.fool.com/investing/2026/11/05/stock-investors-need-to-be-paying-attention-on-dat/?.tsrc=rss",
+            "published_at": "2026-11-05T12:05:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "AMD Faces Nvidia Software Hurdle, While Intel Could Reclaim PC Market Share, Morningstar Says",
+            "url": "https://stocktwits.com/news-articles/markets/equity/nvda-intc-stocks-look-cheaper-than-amd-against-fair-value/cNG1iYXR9EM?.tsrc=rss",
+            "published_at": "2026-11-05T11:34:36+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "2 Bank Stocks to Buy After Their Third-Quarter Earnings Reports",
+            "url": "https://www.fool.com/investing/2026/11/05/2-bank-stocks-to-buy-after-their-third-quarter-ear/?.tsrc=rss",
+            "published_at": "2026-11-05T11:30:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 4,
+          "original_unavailable": 2,
+          "video_transcript_unavailable": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403,
+        "endpoint": "https://data.sec.gov/submissions/CIK0001045810.json"
+      },
+      "scenario": {
+        "stance": "부정",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "method": "종가>SMA20, MACD histogram>0, SPY 대비 RS20>0, OBV5>0: 3–4 긍정 / 0–1 부정 / 2 중립",
+        "cases": [
+          {
+            "case": "상승",
+            "condition": "완료 종가가 20일 저항 237.07 돌파, RVOL≥1.2 확인",
+            "reference": 250.02,
+            "invalidated_below": 230.6
+          },
+          {
+            "case": "기본",
+            "condition": "20일 지지 199.68~저항 237.07 범위 유지",
+            "reference": null
+          },
+          {
+            "case": "하락",
+            "condition": "완료 종가가 20일 지지 199.68 이탈",
+            "reference": 186.73,
+            "invalidated_above": 206.15
+          }
+        ],
+        "risk": "ATR 배수는 조건부 참고 구간이며 확률·목표수익 보장이 아님. 뉴스/경제 발표에 따라 무효화 가능.",
+        "product_risk": null,
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "AMD": {
+      "listing": {
+        "name": "Advanced Micro Devices, Inc. - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Advanced Micro Devices",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": {
+        "close": 488.779999,
+        "rsi_14": 39.493238,
+        "macd": -19.916227,
+        "macd_signal": -10.859213,
+        "macd_histogram": -9.057014,
+        "atr_14": 31.199799,
+        "volume": 50826900.0,
+        "prior_volume_avg_20": 21980380.0,
+        "rvol_20": 2.312376,
+        "volume_5_vs_prior5": 0.757948,
+        "obv": 2196611000.0,
+        "obv_change_5": -2629800.0,
+        "dollar_volume": 24843172119.955444,
+        "rs_20_vs_spy": -0.229817,
+        "support_20": 466.070007,
+        "resistance_20": 643.849976,
+        "sma_5": 502.147992,
+        "sma_10": 520.543997,
+        "sma_20": 546.064995,
+        "sma_50": 548.896998,
+        "sma_200": 414.22795
+      },
+      "quote": {
+        "price": 468.4,
+        "observed_at": "2026-11-05T07:46:09-05:00",
+        "age_minutes": 0.21,
+        "checked_at": "2026-11-05T12:46:21.754418+00:00",
+        "session": "premarket",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 2.497448914340339e-09,
+        "volume_relative_difference": 0.0030975880472682293,
+        "secondary_close": 488.78,
+        "secondary_volume": 50984830.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/AMD/historical?assetclass=stocks&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=AMD&region=US&lang=en-US",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "items": [
+          {
+            "title": "AMD Faces Nvidia Software Hurdle, While Intel Could Reclaim PC Market Share, Morningstar Says",
+            "url": "https://stocktwits.com/news-articles/markets/equity/nvda-intc-stocks-look-cheaper-than-amd-against-fair-value/cNG1iYXR9EM?.tsrc=rss",
+            "published_at": "2026-11-05T11:34:36+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://stocktwits.com/news-articles/markets/equity/nvda-intc-stocks-look-cheaper-than-amd-against-fair-value/cNG1iYXR9EM?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:20.970969+00:00",
+              "sha256": "c6706aa36388c0e474c1eb9560c5a56cb7f6334d28c3491c7b4f5f98ef121e72",
+              "bytes": 307584,
+              "title": "NVDA, INTC Stocks Look Cheaper Than AMD Against Fair Value, Morningstar Says",
+              "published_at": "2026-11-05T11:34:36+00:00",
+              "word_count": 788
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "iShares PHLX SOX Semiconductor (SOXX) Sells AMD and NVDA on Nov. 3",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/ishares-phlx-sox-semiconductor-soxx-110441023.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:04:41+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/markets/stocks/articles/ishares-phlx-sox-semiconductor-soxx-110441023.html?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:21.499189+00:00",
+              "sha256": "e39a7a9f2eaa96d0153ba8f0c5567d84c23e74ecc2df9aaea4dc60dff49e8279",
+              "bytes": 1127576,
+              "title": "iShares PHLX SOX Semiconductor (SOXX) Sells AMD and NVDA on Nov. 3",
+              "published_at": "2026-11-05T11:04:41+00:00",
+              "word_count": 521
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "ETFs Are Buying Advanced Micro Devices (AMD) on Tuesday",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/etfs-buying-advanced-micro-devices-110134074.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:01:34+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "AI Roundup: AMD, Apple Results Puzzle Investors, Democrats’ Midterm Win Weighs On Traders",
+            "url": "https://stocktwits.com/news-articles/markets/equity/ai-roundup-amd-apple-results-puzzle-investors-democrats-midterm-win-weighs-on-traders/cNG1fJyR9EN?.tsrc=rss",
+            "published_at": "2026-11-05T08:48:28+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "After an 11% tech sell-off, are AI valuations attractive again?",
+            "url": "https://finance.yahoo.com/technology/ai/articles/11-tech-sell-off-ai-082806748.html?.tsrc=rss",
+            "published_at": "2026-11-05T08:28:06+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Top 3 AI Infrastructure Stocks To Watch In November 2026",
+            "url": "https://finance.yahoo.com/technology/ai/articles/top-3-ai-infrastructure-stocks-051816770.html?.tsrc=rss",
+            "published_at": "2026-11-05T05:18:16+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "AMD Stock Jumped After Its Report. I'd Wait for a Lower Price to Buy.",
+            "url": "https://www.fool.com/investing/2026/11/04/amd-stock-jumped-after-its-report-i-d-wait-for-a-lower-price-to-buy/?.tsrc=rss",
+            "published_at": "2026-11-05T04:37:01+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "AMD CEO issues a strong warning for the 2027 PC market",
+            "url": "https://www.thestreet.com/technology/amd-2027-pc-market-forecast?.tsrc=rss",
+            "published_at": "2026-11-05T03:47:00+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_retrieved_unsubstantiated": 2
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403,
+        "endpoint": "https://data.sec.gov/submissions/CIK0000002488.json"
+      },
+      "scenario": {
+        "stance": "부정",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "method": "종가>SMA20, MACD histogram>0, SPY 대비 RS20>0, OBV5>0: 3–4 긍정 / 0–1 부정 / 2 중립",
+        "cases": [
+          {
+            "case": "상승",
+            "condition": "완료 종가가 20일 저항 643.85 돌파, RVOL≥1.2 확인",
+            "reference": 706.25,
+            "invalidated_below": 612.65
+          },
+          {
+            "case": "기본",
+            "condition": "20일 지지 466.07~저항 643.85 범위 유지",
+            "reference": null
+          },
+          {
+            "case": "하락",
+            "condition": "완료 종가가 20일 지지 466.07 이탈",
+            "reference": 403.67,
+            "invalidated_above": 497.27
+          }
+        ],
+        "risk": "ATR 배수는 조건부 참고 구간이며 확률·목표수익 보장이 아님. 뉴스/경제 발표에 따라 무효화 가능.",
+        "product_risk": null,
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    },
+    "MU": {
+      "listing": {
+        "name": "Micron Technology, Inc. - Common Stock",
+        "exchange": "NASDAQ",
+        "etf": "N",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Micron",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [
+        "원문·기업 공시 교차검증과 매출/이익 영향 수치 확인 전까지 투자 촉매로 확정하지 않음",
+        "공식 공시 수집 실패: HTTPError",
+        "동일 시각 독립 시세 검증",
+        "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+      ],
+      "indicators": {
+        "close": 795.22998,
+        "rsi_14": 35.377679,
+        "macd": -38.92688,
+        "macd_signal": -29.154575,
+        "macd_histogram": -9.772305,
+        "atr_14": 51.2994,
+        "volume": 35391300.0,
+        "prior_volume_avg_20": 26653290.0,
+        "rvol_20": 1.32784,
+        "volume_5_vs_prior5": 0.074219,
+        "obv": 1284307700.0,
+        "obv_change_5": -97269900.0,
+        "dollar_volume": 28144222807.76367,
+        "rs_20_vs_spy": -0.255696,
+        "support_20": 782.0,
+        "resistance_20": 1088.5,
+        "sma_5": 860.585999,
+        "sma_10": 885.265997,
+        "sma_20": 914.928998,
+        "sma_50": 972.1838,
+        "sma_200": 753.926651
+      },
+      "quote": {
+        "price": 758.83,
+        "observed_at": "2026-11-05T07:46:21-05:00",
+        "age_minutes": 0.03,
+        "checked_at": "2026-11-05T12:46:22.985450+00:00",
+        "session": "premarket",
+        "status": "indicative_unverified",
+        "source": "Yahoo Finance 1m; indicative, not a consolidated real-time feed",
+        "premarket_volume": null,
+        "premarket_same_time_rvol": null,
+        "missing": [
+          "동일 시각 독립 시세 검증",
+          "전체 프리마켓 거래량 및 전일 동일 시간대 비교"
+        ]
+      },
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 2.4560504519044457e-08,
+        "volume_relative_difference": 0.014337122198490593,
+        "secondary_close": 795.23,
+        "secondary_volume": 35906090.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/MU/historical?assetclass=stocks&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379,
+      "news": {
+        "source": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=MU&region=US&lang=en-US",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "items": [
+          {
+            "title": "Could Buying Micron Stock Today Help Set You Up for Life?",
+            "url": "https://www.fool.com/investing/2026/11/05/could-buying-micron-stock-today-help-set-you-up-fo/?.tsrc=rss",
+            "published_at": "2026-11-05T12:37:00+00:00",
+            "verification": "original_unavailable",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "status": "unavailable",
+              "error": "ValueError",
+              "http_status": null
+            }
+          },
+          {
+            "title": "Micron Technology And 2 AI Chip Stocks To Improve Your Portfolio",
+            "url": "https://finance.yahoo.com/technology/ai/articles/micron-technology-2-ai-chip-121408498.html?.tsrc=rss",
+            "published_at": "2026-11-05T12:14:08+00:00",
+            "verification": "original_retrieved_unsubstantiated",
+            "fundamental_impact": null,
+            "causal_claim": null,
+            "original": {
+              "url": "https://finance.yahoo.com/technology/ai/articles/micron-technology-2-ai-chip-121408498.html?.tsrc=rss",
+              "retrieved_at": "2026-11-05T12:46:22.738534+00:00",
+              "sha256": "2e04cb07c228f164c23ab895a27af05bec8cf9959651b13a34a640984b1400cc",
+              "bytes": 1089503,
+              "title": "Micron Technology And 2 AI Chip Stocks To Improve Your Portfolio",
+              "published_at": "2026-11-05T12:14:08+00:00",
+              "word_count": 904
+            },
+            "verified_official_links": [],
+            "supported_claims": [],
+            "reason": "원문 조회·발행시각·종목 관련성 확인. 공식 자료와 수치/기간이 일치한 주장만 별도 표시; 가격 인과관계 미확정."
+          },
+          {
+            "title": "Micron Just Closed Below $800 for the First Time Since July",
+            "url": "https://247wallst.com/investing/2026/11/05/micron-just-closed-below-800-for-the-first-time-since-july/?.tsrc=rss",
+            "published_at": "2026-11-05T12:12:48+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Micron Stock Looks Cheap Despite 220% Rally. Is More Upside Coming?",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/micron-stock-looks-cheap-despite-112922917.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:29:22+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Invesco NASDAQ 100 ETF (QQQM) Adds NVIDIA and Apple on Tuesday",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/invesco-nasdaq-100-etf-qqqm-110516688.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:05:16+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "ETFs Are Buying Micron Technology (MU) on Nov. 3",
+            "url": "https://finance.yahoo.com/markets/stocks/articles/etfs-buying-micron-technology-mu-110131010.html?.tsrc=rss",
+            "published_at": "2026-11-05T11:01:31+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Is 40% Crash Risk For Micron Stock Real?",
+            "url": "https://www.trefis.com/stock/mu/articles/622817/is-40-crash-risk-for-micron-stock-real/2026-11-05?.tsrc=rss",
+            "published_at": "2026-11-05T10:36:02+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          },
+          {
+            "title": "Kospi Tumbles on Chips Rout, Pressuring U.S. Tech Futures",
+            "url": "https://finance.yahoo.com/m/abf6443f-bd9b-3c73-aa99-a7fc485ad923/kospi-tumbles-on-chips-rout%2C.html?.tsrc=rss",
+            "published_at": "2026-11-05T10:21:33+00:00",
+            "verification": "not_attempted_budget",
+            "fundamental_impact": null,
+            "causal_claim": null
+          }
+        ],
+        "missing": [
+          "확인 불가·유료·동영상·예산 초과 기사는 미검증 유지. 원문 접근 성공과 사실 대조 성공은 구분."
+        ],
+        "verification_summary": {
+          "not_attempted_budget": 6,
+          "original_retrieved_unsubstantiated": 1,
+          "original_unavailable": 1
+        }
+      },
+      "official_filings": {
+        "status": "unavailable",
+        "items": [],
+        "error": "HTTPError",
+        "http_status": 403,
+        "endpoint": "https://data.sec.gov/submissions/CIK0000723125.json"
+      },
+      "scenario": {
+        "stance": "부정",
+        "horizon": "5–20 거래일 (약 1주–1개월)",
+        "method": "종가>SMA20, MACD histogram>0, SPY 대비 RS20>0, OBV5>0: 3–4 긍정 / 0–1 부정 / 2 중립",
+        "cases": [
+          {
+            "case": "상승",
+            "condition": "완료 종가가 20일 저항 1088.50 돌파, RVOL≥1.2 확인",
+            "reference": 1191.1,
+            "invalidated_below": 1037.2
+          },
+          {
+            "case": "기본",
+            "condition": "20일 지지 782.00~저항 1088.50 범위 유지",
+            "reference": null
+          },
+          {
+            "case": "하락",
+            "condition": "완료 종가가 20일 지지 782.00 이탈",
+            "reference": 679.4,
+            "invalidated_above": 833.3
+          }
+        ],
+        "risk": "ATR 배수는 조건부 참고 구간이며 확률·목표수익 보장이 아님. 뉴스/경제 발표에 따라 무효화 가능.",
+        "product_risk": null,
+        "basis": "완료된 정규장 일봉만 사용; 장전 뉴스·시세·매크로가 검증된 종합 투자판단은 아님"
+      }
+    }
+  },
+  "market": {
+    "SPY": {
+      "listing": {
+        "name": "State Street SPDR S&P 500 ETF Trust",
+        "exchange": "P",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": null,
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "S&P 500",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [],
+      "indicators": {
+        "close": 766.809998,
+        "rsi_14": 50.69745,
+        "macd": -2.25809,
+        "macd_signal": -1.112682,
+        "macd_histogram": -1.145408,
+        "atr_14": 8.789479,
+        "volume": 62043200.0,
+        "prior_volume_avg_20": 39367365.0,
+        "rvol_20": 1.576006,
+        "volume_5_vs_prior5": 0.481296,
+        "obv": 913654200.0,
+        "obv_change_5": -73865600.0,
+        "dollar_volume": 47575346040.52734,
+        "rs_20_vs_spy": 0.0,
+        "support_20": 750.359985,
+        "resistance_20": 779.419983,
+        "sma_5": 759.667981,
+        "sma_10": 762.960986,
+        "sma_20": 767.57399,
+        "sma_50": 767.057595,
+        "sma_200": 729.912999
+      },
+      "quote": null,
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 3.183847629983916e-09,
+        "volume_relative_difference": 0.0013384014995247995,
+        "secondary_close": 766.81,
+        "secondary_volume": 62126350.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/SPY/historical?assetclass=etf&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379
+    },
+    "QQQ": {
+      "listing": {
+        "name": "Invesco QQQ Trust, Series 1",
+        "exchange": "NASDAQ",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Invesco QQQ",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [],
+      "indicators": {
+        "close": 691.950012,
+        "rsi_14": 38.515888,
+        "macd": -10.759962,
+        "macd_signal": -6.777549,
+        "macd_histogram": -3.982414,
+        "atr_14": 13.014759,
+        "volume": 62127700.0,
+        "prior_volume_avg_20": 41232115.0,
+        "rvol_20": 1.506779,
+        "volume_5_vs_prior5": 0.467682,
+        "obv": 938382300.0,
+        "obv_change_5": -78585300.0,
+        "dollar_volume": 42989262773.394775,
+        "rs_20_vs_spy": -0.073418,
+        "support_20": 680.330017,
+        "resistance_20": 757.179993,
+        "sma_5": 692.830017,
+        "sma_10": 703.208008,
+        "sma_20": 717.424005,
+        "sma_50": 723.557601,
+        "sma_200": 680.5554
+      },
+      "quote": null,
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 1.764149315519603e-08,
+        "volume_relative_difference": 0.0038197143568153846,
+        "secondary_close": 691.95,
+        "secondary_volume": 62365920.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/QQQ/historical?assetclass=etf&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379
+    },
+    "SMH": {
+      "listing": {
+        "name": "VanEck Semiconductor ETF",
+        "exchange": "NASDAQ",
+        "etf": "Y",
+        "test_issue": "N",
+        "financial_status": "N",
+        "source": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+        "file_created_at": "2026-11-05T07:00:00-05:00",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00",
+        "status": "verified",
+        "expected_name_fragment": "Semiconductor",
+        "caveat": "공식 디렉터리 등재 확인은 실시간 거래정지·상장 유지 보장이 아님"
+      },
+      "missing": [],
+      "indicators": {
+        "close": 504.269989,
+        "rsi_14": 34.890871,
+        "macd": -17.672942,
+        "macd_signal": -12.875449,
+        "macd_histogram": -4.797493,
+        "atr_14": 19.89493,
+        "volume": 13358700.0,
+        "prior_volume_avg_20": 9806965.0,
+        "rvol_20": 1.362165,
+        "volume_5_vs_prior5": 0.156026,
+        "obv": 222657500.0,
+        "obv_change_5": -36748200.0,
+        "dollar_volume": 6736391502.236938,
+        "rs_20_vs_spy": -0.179813,
+        "support_20": 497.329987,
+        "resistance_20": 623.130005,
+        "sma_5": 523.051996,
+        "sma_10": 533.307993,
+        "sma_20": 551.883998,
+        "sma_50": 569.9768,
+        "sma_200": 521.2205
+      },
+      "quote": null,
+      "crosscheck": {
+        "status": "verified",
+        "close_relative_difference": 2.17865986362753e-08,
+        "volume_relative_difference": 0.004118846424803979,
+        "secondary_close": 504.27,
+        "secondary_volume": 13413950.0,
+        "thresholds": {
+          "close": 0.01,
+          "volume": 0.1
+        },
+        "caveat": "Providers may use different split/volume conventions; mismatch blocks direction.",
+        "source": "https://api.nasdaq.com/api/quote/SMH/historical?assetclass=etf&limit=20&fromdate=2026-10-20&todate=2026-11-04",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      "daily_as_of": "2026-11-04",
+      "daily_rows": 379
+    }
+  },
+  "provenance": {
+    "daily": "Yahoo Finance via yfinance; raw OHLCV + adjusted close for outcomes",
+    "secondary": "Nasdaq historical endpoint; Stooq fallback; daily close and volume",
+    "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+  },
+  "calendar": {
+    "events": [
+      {
+        "title": "U.S. International Trade in Goods and Services, September 2026",
+        "at_utc": "2026-11-04T13:30:00+00:00",
+        "at_kst": "2026-11-04T22:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Experimental Super Intelligence Economic Statistics, 2024",
+        "at_utc": "2026-11-17T15:00:00+00:00",
+        "at_kst": "2026-11-18T00:00:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Outdoor Recreation Economic Statistics, U.S. and States, 2025",
+        "at_utc": "2026-11-18T15:00:00+00:00",
+        "at_kst": "2026-11-19T00:00:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Activities of U.S. Multinational Enterprises, 2024",
+        "at_utc": "2026-11-20T13:30:00+00:00",
+        "at_kst": "2026-11-20T22:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "GDP (Second Estimate) and Corporate Profits, 3rd Quarter 2026",
+        "at_utc": "2026-11-25T13:30:00+00:00",
+        "at_kst": "2026-11-25T22:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "Personal Income and Outlays, October 2026",
+        "at_utc": "2026-11-25T13:30:00+00:00",
+        "at_kst": "2026-11-25T22:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      },
+      {
+        "title": "GDP by County and Personal Income by County, 2025",
+        "at_utc": "2026-12-02T13:30:00+00:00",
+        "at_kst": "2026-12-02T22:30:00+09:00",
+        "source": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "actual": null,
+        "consensus": null,
+        "previous": null
+      }
+    ],
+    "sources": [
+      {
+        "name": "BEA",
+        "url": "https://www.bea.gov/news/schedule/ics/online-calendar-subscription.ics",
+        "status": "live",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      },
+      {
+        "name": "Federal Reserve",
+        "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+        "status": "live",
+        "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+      }
+    ],
+    "errors": [
+      {
+        "source": "https://www.bls.gov/schedule/news_release/bls.ics",
+        "error": "ValueError",
+        "reason": "live unavailable and snapshot missing/expired"
+      }
+    ],
+    "warnings": [
+      {
+        "source": "https://www.bls.gov/schedule/news_release/bls.ics",
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      {
+        "source": "BLS monthly HTML",
+        "error": "HTTPError",
+        "http_status": 403
+      },
+      {
+        "source": "FRED major BLS calendar",
+        "error": "ReadTimeout",
+        "http_status": null
+      }
+    ],
+    "missing": [
+      "FOMC 정확한 발표 시각·소매판매·기업 실적 일정 미수집",
+      "발표 실제치·컨센서스·이전치 미수집"
+    ],
+    "coverage": "BLS·BEA 발표 일정 및 FOMC 날짜. FRED 대체 경로는 CPI·PPI·고용보고서 3종만 포함. 그 외 BLS 발표는 미수집. 저장된 BLS 사본은 최대 48시간 유효하며 실시간 조회와 구분."
+  },
+  "outcomes": [
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.012877026945710468,
+      "benchmark_return": -0.012001407556411992,
+      "excess_return": -0.0008756193892984765,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.005421885671675231,
+      "benchmark_return": -0.005017853359648994,
+      "excess_return": 0.010439739031324224,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.014709448098498168,
+      "benchmark_return": -0.012001407556411992,
+      "excess_return": 0.02671085565491016,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.09250980485200988,
+      "benchmark_return": -0.005017853359648994,
+      "excess_return": 0.09752765821165887,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.02063601480907773,
+      "benchmark_return": -0.012001407556411992,
+      "excess_return": -0.008634607252665738,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.026454692702138405,
+      "benchmark_return": -0.005017853359648994,
+      "excess_return": -0.02143683934248941,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.18855619498678144,
+      "benchmark_return": -0.012001407556411992,
+      "excess_return": -0.17655478743036945,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.01185884889109512,
+      "benchmark_return": -0.005017853359648994,
+      "excess_return": 0.016876702250744113,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.020086769919498204,
+      "benchmark_return": -0.012001407556411992,
+      "excess_return": -0.008085362363086213,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.013391179946332099,
+      "benchmark_return": -0.005017853359648994,
+      "excess_return": -0.008373326586683105,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.07235868139982138,
+      "benchmark_return": -0.012001407556411992,
+      "excess_return": -0.06035727384340939,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.0344625980054305,
+      "benchmark_return": -0.005017853359648994,
+      "excess_return": 0.039480451365079494,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-22",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.054114347511800664,
+      "benchmark_return": -0.012001407556411992,
+      "excess_return": -0.04211293995538867,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-10-29",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.03178392870961022,
+      "benchmark_return": -0.005017853359648994,
+      "excess_return": 0.036801782069259215,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-16-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-16",
+      "target_session": "2026-11-12",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-23",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.027378051699257555,
+      "benchmark_return": -0.009462625223781496,
+      "excess_return": -0.01791542647547606,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-30",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.028431009913995275,
+      "benchmark_return": -0.015002033365005829,
+      "excess_return": -0.013428976548989446,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-11-13",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-23",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.041174828589379375,
+      "benchmark_return": -0.009462625223781496,
+      "excess_return": 0.05063745381316087,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-30",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.118349643520542,
+      "benchmark_return": -0.015002033365005829,
+      "excess_return": 0.13335167688554783,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-11-13",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-23",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.01165978881050056,
+      "benchmark_return": -0.009462625223781496,
+      "excess_return": -0.002197163586719064,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-30",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.09723242593485004,
+      "benchmark_return": -0.015002033365005829,
+      "excess_return": -0.08223039256984421,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-11-13",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-23",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.19615199603902667,
+      "benchmark_return": -0.009462625223781496,
+      "excess_return": -0.18668937081524517,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-30",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.2587782076595747,
+      "benchmark_return": -0.015002033365005829,
+      "excess_return": -0.24377617429456888,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-11-13",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-23",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.03273727276403471,
+      "benchmark_return": -0.009462625223781496,
+      "excess_return": -0.023274647540253213,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-30",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.06171483877666073,
+      "benchmark_return": -0.015002033365005829,
+      "excess_return": -0.0467128054116549,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-11-13",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-23",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.06341304398805181,
+      "benchmark_return": -0.009462625223781496,
+      "excess_return": -0.053950418764270314,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-30",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.08514270000632718,
+      "benchmark_return": -0.015002033365005829,
+      "excess_return": -0.07014066664132135,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-11-13",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-23",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.03940671061358325,
+      "benchmark_return": -0.009462625223781496,
+      "excess_return": -0.029944085389801756,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-10-30",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.031536312126931754,
+      "benchmark_return": -0.015002033365005829,
+      "excess_return": -0.016534278761925925,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-19-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-19",
+      "target_session": "2026-11-13",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-10-26",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.014642851693289605,
+      "benchmark_return": -0.0006397908805093611,
+      "excess_return": -0.014003060812780244,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-02",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.09857143674577984,
+      "benchmark_return": -0.01796674330662229,
+      "excess_return": -0.08060469343915755,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-16",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-10-26",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.0576320525230698,
+      "benchmark_return": -0.0006397908805093611,
+      "excess_return": 0.05827184340357916,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-02",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.09058012492031242,
+      "benchmark_return": -0.01796674330662229,
+      "excess_return": 0.10854686822693471,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-16",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-10-26",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.0049941556864174785,
+      "benchmark_return": -0.0006397908805093611,
+      "excess_return": 0.00563394656692684,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-02",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.0670452430356524,
+      "benchmark_return": -0.01796674330662229,
+      "excess_return": -0.04907849972903011,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-16",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-10-26",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.042530647332193916,
+      "benchmark_return": -0.0006397908805093611,
+      "excess_return": -0.041890856451684555,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-02",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.27877697217474473,
+      "benchmark_return": -0.01796674330662229,
+      "excess_return": -0.26081022886812244,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-16",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-10-26",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 9.262095035023066e-05,
+      "benchmark_return": -0.0006397908805093611,
+      "excess_return": 0.0007324118308595917,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-02",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.06445040487224352,
+      "benchmark_return": -0.01796674330662229,
+      "excess_return": -0.046483661565621226,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-16",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-10-26",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.0023772871197191847,
+      "benchmark_return": -0.0006397908805093611,
+      "excess_return": 0.0030170780002285458,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-02",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.11920308830831683,
+      "benchmark_return": -0.01796674330662229,
+      "excess_return": -0.10123634500169454,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-16",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-10-26",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.022134762100753047,
+      "benchmark_return": -0.0006397908805093611,
+      "excess_return": 0.022774552981262408,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-02",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.05716351413052945,
+      "benchmark_return": -0.01796674330662229,
+      "excess_return": -0.03919677082390716,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-20-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-20",
+      "target_session": "2026-11-16",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "HIMS",
+      "stance": "중립",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-10-27",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.04969363942059968,
+      "benchmark_return": -0.001958076428139388,
+      "excess_return": -0.04773556299246029,
+      "direction_correct": null,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "HIMS",
+      "stance": "중립",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-03",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.12525522474286988,
+      "benchmark_return": -0.021811024413509017,
+      "excess_return": -0.10344420032936086,
+      "direction_correct": null,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "HIMS",
+      "stance": "중립",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-17",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-10-27",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.06824318821048392,
+      "benchmark_return": -0.001958076428139388,
+      "excess_return": 0.0702012646386233,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-03",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.044752661437215346,
+      "benchmark_return": -0.021811024413509017,
+      "excess_return": 0.06656368585072436,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "TSLA",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-17",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-10-27",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.07461382604448008,
+      "benchmark_return": -0.001958076428139388,
+      "excess_return": -0.07265574961634069,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-03",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.11989287676075744,
+      "benchmark_return": -0.021811024413509017,
+      "excess_return": -0.09808185234724842,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-17",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-10-27",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.01730506288872935,
+      "benchmark_return": -0.001958076428139388,
+      "excess_return": -0.015346986460589962,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-03",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.2891308349922037,
+      "benchmark_return": -0.021811024413509017,
+      "excess_return": -0.2673198105786947,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-17",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-10-27",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.01366765107122625,
+      "benchmark_return": -0.001958076428139388,
+      "excess_return": -0.011709574643086862,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-03",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.06458184213824691,
+      "benchmark_return": -0.021811024413509017,
+      "excess_return": -0.0427708177247379,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-17",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-10-27",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.02624881813070501,
+      "benchmark_return": -0.001958076428139388,
+      "excess_return": 0.028206894558844398,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-03",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.1136226248997011,
+      "benchmark_return": -0.021811024413509017,
+      "excess_return": -0.09181160048619208,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-17",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-10-27",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.005434450802521029,
+      "benchmark_return": -0.001958076428139388,
+      "excess_return": 0.007392527230660417,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-03",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.07430663971906415,
+      "benchmark_return": -0.021811024413509017,
+      "excess_return": -0.05249561530555513,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-21-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-21",
+      "target_session": "2026-11-17",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-10-28",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.02374302792134686,
+      "benchmark_return": 0.007750828554421663,
+      "excess_return": 0.015992199366925197,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-04",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.06913406370224906,
+      "benchmark_return": 0.0005741383981754389,
+      "excess_return": -0.0697082021004245,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-18",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-10-28",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.07996471183437714,
+      "benchmark_return": 0.007750828554421663,
+      "excess_return": 0.07221388327995548,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-04",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": 0.02912178697705259,
+      "benchmark_return": 0.0005741383981754389,
+      "excess_return": 0.02854764857887715,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-18",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "SPCX",
+      "stance": "중립",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-10-28",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.058232349363620206,
+      "benchmark_return": 0.007750828554421663,
+      "excess_return": -0.06598317791804187,
+      "direction_correct": null,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "SPCX",
+      "stance": "중립",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-04",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.11860455060389519,
+      "benchmark_return": 0.0005741383981754389,
+      "excess_return": -0.11917868900207063,
+      "direction_correct": null,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "SPCX",
+      "stance": "중립",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-18",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-10-28",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.18500941399442739,
+      "benchmark_return": 0.007750828554421663,
+      "excess_return": 0.17725858544000572,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-04",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.2639363836988492,
+      "benchmark_return": 0.0005741383981754389,
+      "excess_return": -0.26451052209702464,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-18",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-10-28",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.008059687563423124,
+      "benchmark_return": 0.007750828554421663,
+      "excess_return": -0.015810516117844786,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-04",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.07829410775896717,
+      "benchmark_return": 0.0005741383981754389,
+      "excess_return": -0.07886824615714261,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-18",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-10-28",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.10368255941000037,
+      "benchmark_return": 0.007750828554421663,
+      "excess_return": 0.09593173085557871,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-04",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.06739167802317358,
+      "benchmark_return": 0.0005741383981754389,
+      "excess_return": -0.06796581642134902,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-18",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-10-28",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.11773868368022455,
+      "benchmark_return": 0.007750828554421663,
+      "excess_return": 0.10998785512580289,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-04",
+      "horizon": 10,
+      "status": "evaluated",
+      "return": -0.0959802597064503,
+      "benchmark_return": 0.0005741383981754389,
+      "excess_return": -0.09655439810462574,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-22-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-22",
+      "target_session": "2026-11-18",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-10-29",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.02842286599590138,
+      "benchmark_return": 0.012448954643466736,
+      "excess_return": 0.015973911352434644,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-05",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-19",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-10-29",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.08065373687404831,
+      "benchmark_return": 0.012448954643466736,
+      "excess_return": 0.06820478223058157,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-05",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-19",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-10-29",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.02731017025727356,
+      "benchmark_return": 0.012448954643466736,
+      "excess_return": -0.039759124900740295,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-05",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-19",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-10-29",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.2541646270839022,
+      "benchmark_return": 0.012448954643466736,
+      "excess_return": 0.24171567244043546,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-05",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-19",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-10-29",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.01265461917356947,
+      "benchmark_return": 0.012448954643466736,
+      "excess_return": 0.00020566453010273378,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-05",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-19",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-10-29",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.11017030712152809,
+      "benchmark_return": 0.012448954643466736,
+      "excess_return": 0.09772135247806135,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-05",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-19",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-10-29",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.0834754471675232,
+      "benchmark_return": 0.012448954643466736,
+      "excess_return": 0.07102649252405646,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-05",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-23-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-23",
+      "target_session": "2026-11-19",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-02",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.09824937558011781,
+      "benchmark_return": -0.019860884009901603,
+      "excess_return": -0.07838849157021621,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-09",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-23",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-02",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": 0.015235311267627338,
+      "benchmark_return": -0.019860884009901603,
+      "excess_return": 0.03509619527752894,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-09",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-23",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-02",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.07489321125198256,
+      "benchmark_return": -0.019860884009901603,
+      "excess_return": -0.05503232724208096,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-09",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-23",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-02",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.28272309014879327,
+      "benchmark_return": -0.019860884009901603,
+      "excess_return": -0.26286220613889166,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-09",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-23",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-02",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.07443543668053287,
+      "benchmark_return": -0.019860884009901603,
+      "excess_return": -0.05457455267063127,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-09",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-23",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-02",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.13466421103554205,
+      "benchmark_return": -0.019860884009901603,
+      "excess_return": -0.11480332702564044,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-09",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-23",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-02",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.09489784287087044,
+      "benchmark_return": -0.019860884009901603,
+      "excess_return": -0.07503695886096884,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-09",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-27-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-27",
+      "target_session": "2026-11-23",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-03",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.07253693208021461,
+      "benchmark_return": -0.022140722103116572,
+      "excess_return": -0.05039620997709804,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-10",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-24",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-03",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.02842793923835374,
+      "benchmark_return": -0.022140722103116572,
+      "excess_return": -0.006287217135237166,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-10",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-24",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-03",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.041120972785368415,
+      "benchmark_return": -0.022140722103116572,
+      "excess_return": -0.018980250682251842,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-10",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-24",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-03",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.29672018959232305,
+      "benchmark_return": -0.022140722103116572,
+      "excess_return": -0.2745794674892065,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-10",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-24",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-03",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.06015822043330321,
+      "benchmark_return": -0.022140722103116572,
+      "excess_return": -0.03801749833018664,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-10",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-24",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-03",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.15561530769511778,
+      "benchmark_return": -0.022140722103116572,
+      "excess_return": -0.1334745855920012,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-10",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-24",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-03",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.11085466923599341,
+      "benchmark_return": -0.022140722103116572,
+      "excess_return": -0.08871394713287684,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-10",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-28-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-10-28",
+      "target_session": "2026-11-24",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-04",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.08885852225330226,
+      "benchmark_return": -0.00257545041602969,
+      "excess_return": -0.08628307183727257,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-11",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-25",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-04",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.05039075560327799,
+      "benchmark_return": -0.00257545041602969,
+      "excess_return": -0.0478153051872483,
+      "direction_correct": false,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-11",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-25",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-04",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.04456626305848743,
+      "benchmark_return": -0.00257545041602969,
+      "excess_return": -0.04199081264245774,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-11",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-25",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-04",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.3421468044233026,
+      "benchmark_return": -0.00257545041602969,
+      "excess_return": -0.3395713540072729,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-11",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-25",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-04",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.06638363354647181,
+      "benchmark_return": -0.00257545041602969,
+      "excess_return": -0.06380818313044212,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-11",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-25",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-04",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.13070236398735946,
+      "benchmark_return": -0.00257545041602969,
+      "excess_return": -0.12812691357132977,
+      "direction_correct": true,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-11",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-25",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "MU",
+      "stance": "중립",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-04",
+      "horizon": 5,
+      "status": "evaluated",
+      "return": -0.1784305034785575,
+      "benchmark_return": -0.00257545041602969,
+      "excess_return": -0.1758550530625278,
+      "direction_correct": null,
+      "note": "조정주가 기준 배당 포함 근사 수익률; 비용·슬리피지 제외. 실제 체결 아님."
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "MU",
+      "stance": "중립",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-11",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-29-premarket",
+      "symbol": "MU",
+      "stance": "중립",
+      "entry_session": "2026-10-29",
+      "target_session": "2026-11-25",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-05",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-12",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "HIMS",
+      "stance": "긍정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-27",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-05",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-12",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-27",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-05",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-12",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-27",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-05",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-12",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-27",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-05",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-12",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-27",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-05",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-12",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-27",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "MU",
+      "stance": "중립",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-05",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "MU",
+      "stance": "중립",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-12",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-10-30-premarket",
+      "symbol": "MU",
+      "stance": "중립",
+      "entry_session": "2026-10-30",
+      "target_session": "2026-11-27",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-06",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-13",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-30",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-06",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-13",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-30",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-06",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-13",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-30",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-06",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-13",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-30",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-06",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-13",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-30",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-06",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-13",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-30",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-06",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-13",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-02-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-02",
+      "target_session": "2026-11-30",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-09",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-16",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-12-01",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-09",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-16",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-12-01",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-09",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-16",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-12-01",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-09",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-16",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-12-01",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-09",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-16",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-12-01",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-09",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-16",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-12-01",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-09",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-11-16",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-03-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-03",
+      "target_session": "2026-12-01",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-10",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-17",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-12-02",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-10",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-17",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-12-02",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-10",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-17",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-12-02",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-10",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-17",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-12-02",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-10",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-17",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-12-02",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-10",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-17",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-12-02",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-10",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-11-17",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-04-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-04",
+      "target_session": "2026-12-02",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-11",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-18",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "HIMS",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-12-03",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-11",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-18",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "TSLA",
+      "stance": "긍정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-12-03",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-11",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-18",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "SPCX",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-12-03",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-11",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-18",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "SOXL",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-12-03",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-11",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-18",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "NVDA",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-12-03",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-11",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-18",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "AMD",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-12-03",
+      "horizon": 20,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-11",
+      "horizon": 5,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-11-18",
+      "horizon": 10,
+      "status": "pending"
+    },
+    {
+      "forecast_id": "2026-11-05-premarket",
+      "symbol": "MU",
+      "stance": "부정",
+      "entry_session": "2026-11-05",
+      "target_session": "2026-12-03",
+      "horizon": 20,
+      "status": "pending"
+    }
+  ],
+  "listing_sources": [
+    {
+      "url": "https://www.nasdaqtrader.com/dynamic/SymDir/nasdaqlisted.txt",
+      "file_created_at": "2026-11-05T07:00:00-05:00",
+      "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+    },
+    {
+      "url": "https://www.nasdaqtrader.com/dynamic/SymDir/otherlisted.txt",
+      "file_created_at": "2026-11-05T07:00:00-05:00",
+      "retrieved_at": "2026-11-05T12:46:04.695306+00:00"
+    }
+  ],
+  "listing_errors": [],
+  "quality_failures": [
+    {
+      "scope": "HIMS",
+      "code": "official_filings_unverified",
+      "status": "unavailable",
+      "http_status": 403,
+      "endpoint": "https://data.sec.gov/submissions/CIK0001773751.json"
+    },
+    {
+      "scope": "HIMS",
+      "code": "collection_failure"
+    },
+    {
+      "scope": "TSLA",
+      "code": "official_filings_unverified",
+      "status": "unavailable",
+      "http_status": 403,
+      "endpoint": "https://data.sec.gov/submissions/CIK0001318605.json"
+    },
+    {
+      "scope": "TSLA",
+      "code": "collection_failure"
+    },
+    {
+      "scope": "SPCX",
+      "code": "official_filings_unverified",
+      "status": "unavailable",
+      "http_status": 403,
+      "endpoint": "https://data.sec.gov/submissions/CIK0001181412.json"
+    },
+    {
+      "scope": "SPCX",
+      "code": "collection_failure"
+    },
+    {
+      "scope": "SOXL",
+      "code": "official_filings_unverified",
+      "status": "unavailable",
+      "http_status": 403,
+      "endpoint": "https://data.sec.gov/submissions/CIK0001424958.json"
+    },
+    {
+      "scope": "SOXL",
+      "code": "collection_failure"
+    },
+    {
+      "scope": "NVDA",
+      "code": "official_filings_unverified",
+      "status": "unavailable",
+      "http_status": 403,
+      "endpoint": "https://data.sec.gov/submissions/CIK0001045810.json"
+    },
+    {
+      "scope": "NVDA",
+      "code": "collection_failure"
+    },
+    {
+      "scope": "AMD",
+      "code": "official_filings_unverified",
+      "status": "unavailable",
+      "http_status": 403,
+      "endpoint": "https://data.sec.gov/submissions/CIK0000002488.json"
+    },
+    {
+      "scope": "AMD",
+      "code": "collection_failure"
+    },
+    {
+      "scope": "MU",
+      "code": "official_filings_unverified",
+      "status": "unavailable",
+      "http_status": 403,
+      "endpoint": "https://data.sec.gov/submissions/CIK0000723125.json"
+    },
+    {
+      "scope": "MU",
+      "code": "collection_failure"
+    },
+    {
+      "scope": "calendar",
+      "code": "calendar_unavailable",
+      "source": "https://www.bls.gov/schedule/news_release/bls.ics",
+      "error": "ValueError",
+      "reason": "live unavailable and snapshot missing/expired"
+    }
+  ],
+  "core_price_volume_verified": true,
+  "outcome_summary": {
+    "5": {
+      "evaluated": 63,
+      "pending": 35,
+      "missing_data": 0,
+      "directional_sample_size": 60,
+      "direction_accuracy": 0.65,
+      "mean_excess_return": -0.02849487130833122
+    },
+    "10": {
+      "evaluated": 35,
+      "pending": 63,
+      "missing_data": 0,
+      "directional_sample_size": 33,
+      "direction_accuracy": 0.7575757575757576,
+      "mean_excess_return": -0.054131920507693894
+    },
+    "20": {
+      "evaluated": 0,
+      "pending": 98,
+      "missing_data": 0,
+      "directional_sample_size": 0,
+      "direction_accuracy": null,
+      "mean_excess_return": null
+    }
+  }
+}
