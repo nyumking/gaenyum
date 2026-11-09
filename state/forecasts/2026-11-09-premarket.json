@@ -1,0 +1,22 @@
+{
+  "id": "2026-11-09-premarket",
+  "generated_at": "2026-11-09T12:46:18.091445+00:00",
+  "entry_rule": "first regular-session open strictly after generation",
+  "decisions": {
+    "HIMS": {
+      "stance": "부정",
+      "signal_session": "2026-11-06",
+      "signal_close": 26.0
+    },
+    "TSLA": {
+      "stance": "부정",
+      "signal_session": "2026-11-06",
+      "signal_close": 358.220001
+    },
+    "SPCX": {
+      "stance": "부정",
+      "signal_session": "2026-11-06",
+      "signal_close": 134.270004
+    }
+  }
+}
