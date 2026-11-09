@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "event": "schedule",
+  "cron": "0 22 * * 1-5",
+  "mode": "close",
+  "run_id": "42713516645",
+  "attempt": "1",
+  "commit": "1d8ff58e5a79b09101685657b4af89ca5efcb7b1",
+  "ref": "refs/heads/main",
+  "generated_at_utc": "2026-11-09T22:38:07.207068+00:00",
+  "generated_at_kst": "2026-11-10T07:38:07.207068+09:00",
+  "nominal_slot_utc": "2026-11-09T22:00:00+00:00",
+  "delay_minutes": 38.12,
+  "scheduled_slot_valid": true,
+  "report_status": "degraded",
+  "files": {
+    "briefing.md": {
+      "sha256": "5845d44ca72765bea4fced2abcdf693c4c43ad6df1934f87c4854859640a7a7f",
+      "bytes": 57221
+    },
+    "briefing.json": {
+      "sha256": "83069411ff0bd4c87058223ce7b7ae3481fe1c03a5584c2726779bb66b7c05c7",
+      "bytes": 184079
+    }
+  }
+}
