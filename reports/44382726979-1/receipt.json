@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "event": "schedule",
+  "cron": "0 12 * * 1-5",
+  "mode": "premarket",
+  "run_id": "44382726979",
+  "attempt": "1",
+  "commit": "1d8ff58e5a79b09101685657b4af89ca5efcb7b1",
+  "ref": "refs/heads/main",
+  "generated_at_utc": "2026-11-18T19:41:24.713666+00:00",
+  "generated_at_kst": "2026-11-19T04:41:24.713666+09:00",
+  "nominal_slot_utc": "2026-11-18T12:00:00+00:00",
+  "delay_minutes": 461.41,
+  "scheduled_slot_valid": false,
+  "report_status": "skipped_nontrading_or_wrong_window",
+  "files": {
+    "briefing.md": {
+      "sha256": "86d641ec2df75539e4dec689037ef6f2b2fcee0eb3c65183fb7c147dd50bb0cd",
+      "bytes": 2084
+    },
+    "briefing.json": {
+      "sha256": "f7edeb82cb9a9b0bbe5fad96fafb76ba5a936416050762b8b0367e87d34816e4",
+      "bytes": 779
+    }
+  }
+}
