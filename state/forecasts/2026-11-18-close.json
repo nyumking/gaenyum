@@ -1,0 +1,42 @@
+{
+  "id": "2026-11-18-close",
+  "generated_at": "2026-11-19T02:56:45.855898+00:00",
+  "entry_rule": "first regular-session open strictly after generation",
+  "decisions": {
+    "HIMS": {
+      "stance": "부정",
+      "signal_session": "2026-11-18",
+      "signal_close": 17.049999
+    },
+    "TSLA": {
+      "stance": "중립",
+      "signal_session": "2026-11-18",
+      "signal_close": 383.720001
+    },
+    "SPCX": {
+      "stance": "긍정",
+      "signal_session": "2026-11-18",
+      "signal_close": 143.5
+    },
+    "SOXL": {
+      "stance": "부정",
+      "signal_session": "2026-11-18",
+      "signal_close": 49.259998
+    },
+    "NVDA": {
+      "stance": "부정",
+      "signal_session": "2026-11-18",
+      "signal_close": 150.960007
+    },
+    "AMD": {
+      "stance": "긍정",
+      "signal_session": "2026-11-18",
+      "signal_close": 530.140015
+    },
+    "MU": {
+      "stance": "부정",
+      "signal_session": "2026-11-18",
+      "signal_close": 705.27002
+    }
+  }
+}
