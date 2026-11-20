@@ -1,0 +1,27 @@
+{
+  "id": "2026-11-19-close",
+  "generated_at": "2026-11-20T02:50:31.460850+00:00",
+  "entry_rule": "first regular-session open strictly after generation",
+  "decisions": {
+    "TSLA": {
+      "stance": "부정",
+      "signal_session": "2026-11-19",
+      "signal_close": 374.410004
+    },
+    "SOXL": {
+      "stance": "부정",
+      "signal_session": "2026-11-19",
+      "signal_close": 45.299999
+    },
+    "AMD": {
+      "stance": "중립",
+      "signal_session": "2026-11-19",
+      "signal_close": 489.190002
+    },
+    "MU": {
+      "stance": "부정",
+      "signal_session": "2026-11-19",
+      "signal_close": 690.440002
+    }
+  }
+}
